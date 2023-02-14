@@ -1,6 +1,4 @@
-# Alternative-Data
-
-Alternative data in finance.
+# Alternative Data in Finance
 
 We start with natural language data.
 
