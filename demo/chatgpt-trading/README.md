@@ -34,10 +34,10 @@ Let's fully use the GPT 3.0 model to create an agent that can trade as smartly a
   ``` python
   "stock_name" : "AAPL",        # please refer to the stocks provided by stocknet-dataset
   "start_date":"2014-01-01",    # should be later than 2014-01-01
-  "end_date":"2015-12-30",	  # should be earlier than 2015-12-30
+  "end_date":"2015-12-30",    # should be earlier than 2015-12-30
   "init_cash": 100,             # initial avaliable cash
-  "init_hold": 0,				  # initial avaliable stock holdings
-  "cal_on": "Close",			  # The column that used to calculate prices
+  "init_hold": 0,                 # initial avaliable stock holdings
+  "cal_on": "Close",              # The column that used to calculate prices
   "trade_volumn": 100,          # Volumns to trade
   ```
 
@@ -49,9 +49,9 @@ Let's fully use the GPT 3.0 model to create an agent that can trade as smartly a
 
 ## 4. Final results
 
-  ![](https://github.com/oliverwang15/Alternative-Data/blob/main/demo/chatgpt-trading/output.png?raw=true)
-
 * The result shows that the agent have given buy signals when the stock price was about to raise and sell signals when the stock price was about to drop
+
+  ![image-20230216004801458](https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/Chatgpt_trading_res.png)
 
 * The final backtest results are listed below. 
   |        item         | result  |
@@ -70,3 +70,7 @@ Let's fully use the GPT 3.0 model to create an agent that can trade as smartly a
   |        Alpha        |  0.24   |
   |        Beta         |  0.31   |
 
+## 5. Todos
+
+1. Combing price features
+2. Train RL agents on the sentiment scores given by GPT models
