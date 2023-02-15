@@ -36,8 +36,8 @@ Let's fully use the GPT 3.0 model to create an agent that can trade as smartly a
   "start_date":"2014-01-01",    # should be later than 2014-01-01
   "end_date":"2015-12-30",	  # should be earlier than 2015-12-30
   "init_cash": 100,             # initial avaliable cash
-  "init_hold": 0,				 # initial avaliable stock holdings
-  "cal_on": "Close"			 # The column that used to calculate prices
+  "init_hold": 0,				  # initial avaliable stock holdings
+  "cal_on": "Close",			  # The column that used to calculate prices
   "trade_volumn": 100,          # Volumns to trade
   ```
 
