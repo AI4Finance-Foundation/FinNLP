@@ -49,7 +49,7 @@ Let's fully use the GPT 3.0 model to create an agent that can trade as smartly a
 
 ## 4. Final results
 
-![](https://github.com/oliverwang15/Alternative-Data/blob/main/demo/chatgpt-trading/output.png?raw=true)
+  ![](https://github.com/oliverwang15/Alternative-Data/blob/main/demo/chatgpt-trading/output.png?raw=true)
 
 * The result shows that the agent have given buy signals when the stock price was about to raise and sell signals when the stock price was about to drop
 
