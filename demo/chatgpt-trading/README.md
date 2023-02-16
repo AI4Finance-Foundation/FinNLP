@@ -12,8 +12,8 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
 
 ## 2. ChatGPT Trading Agent
 
-* We used the GPT model to analyze the sentiment of each day's tweets and use the mean of sentiment scores to make trading decisions. 
-
+* We calculate the average sentiment score `S`.
+* We implement a simple strategy that buys 100 shares when `S` >= 0.3 and sells 100 shares when `S` <= -0.3
 * Parameters of GPT Model are:
 
   ``` PyThon
@@ -24,15 +24,10 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
   "sell_threshold": -0.3             # the min negative sentiment is -1, so this should range from -1 to 0
   ```
 
-* The `buy_threshold` and `sell_threshold` may have a huge impact on the final results, so they should be considered carefully.
+## 3. Backtest
 
-* We don't suggest using  `openai` for the `source` since free accounts may reach limits quickly.
-
-## 3. Trading Market 
-
-* In order to test the trading ability of the Chatgpt trading agent, a special trading environment was designed. This environment can not only be used for the Chatgpt trading agent but also used for the reinforcement learning. 
-
-* Parameters of the Trading Environment are:
+* We backtest the agent's performance from '2014-01-01' to '2015-12-30'.
+* Parameters are:
 
   ``` PyThon
   "stock_name" : "AAPL",        # please refer to the stocks provided by stocknet-dataset
@@ -44,19 +39,13 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
   "trade_volumn": 100,          # Volumns to trade
   ```
 
-* The start price will be normalized to 1, so `init_cash` denotes shares available for buying, and `init_hold` denotes shares available for selling.
+## 4. Result
 
-* If  you use `stocknet-dataset` the `cal_on` and be `Close` ,`Adj Close` or even `open`,`high`,`low`.
-
-* The environment will adjust the trading volume automatically when the cash is not enough or the holding is not enough, to make sure that the cash is always >= 0 and the holding is always >= 0.
-
-## 4. Final results
-
-* The result shows that the agent have given buy signals when the stock price was about to raise and sell signals when the stock price was about to drop
+* The result is shown in the figure:
 
   ![image-20230216004801458](https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/Chatgpt_trading_res.png)
 
-* The final backtest results are listed below. 
+* The final backtest results are listed below: 
   |        item         | result  |
   | :-----------------: | :-----: |
   |    Annual return    | 30.603% |
