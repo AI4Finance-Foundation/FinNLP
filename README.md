@@ -6,28 +6,23 @@ We start with natural language data.
 
 ### 1. News
 
-##### 1.1 Data sources
-
 * Tushare
 * Akshare
 * Yahoo Finance
 
 ### 2. Social Media
 
-##### 2.1 Data sources
-
 * Twitter
 * Weibo
 
 ### 3. Trends
 
-##### 3.1 Data sources
 * Google trends
 * baidu index
 
 * [[Github] Google Trends Data for automated stock trading using Reinforcement learning.](https://github.com/Athe-kunal/Reinforcement-learning-trading-agent-using-Google-trends-data)
 
-## Language Models
+## Large Language Models (LLM)
 ### 1. GPT-3
 ### 2. PaML
 
