@@ -7,8 +7,8 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
 ## 1. Price Data and Tweets Data Preparation
 
 * First, we fetch price data and Tweets data from [stocknet-dataset](https://github.com/yumoxu/stocknet-dataset)
-* Second, We input the Tweets data to two GPT models, "text-curie-001" and "text-davinci-003" model and get the sentiment scores
-* Third, we save the sentiment scores to the pickle files under `./data`
+* Second, We input the Tweets data to a GPT model, say "text-curie-001" or "text-davinci-003", and get the corresponding sentiment scores
+* Third, we save the sentiment scores to a file under `./data`
 
 ## 2. ChatGPT Trading Agent
 
