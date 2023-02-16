@@ -1,4 +1,4 @@
-# Alternative Data in Finance
+# Natural Language Processing in Finance
 
 We start with natural language data.
 
