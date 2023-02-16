@@ -41,12 +41,12 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
 
 ## 4. Result
 
-* The result is shown in the figure:
+* The result is shown as follows:
 
   ![image-20230216004801458](https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/Chatgpt_trading_res.png)
 
-* The final backtest results are listed below: 
-  |        item         | result  |
+* The performance metrics are as follows
+  |        metrics      | result  |
   | :-----------------: | :-----: |
   |    Annual return    | 30.603% |
   | Cumulative returns  | 66.112% |
