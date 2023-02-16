@@ -18,7 +18,7 @@ We start with natural language data.
 ### 3. Trends
 
 * Google trends
-* baidu index
+* Baidu index
 
 * [[Github] Google Trends Data for automated stock trading using Reinforcement learning.](https://github.com/Athe-kunal/Reinforcement-learning-trading-agent-using-Google-trends-data)
 
