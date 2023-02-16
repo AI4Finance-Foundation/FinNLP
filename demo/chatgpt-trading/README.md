@@ -27,7 +27,7 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
 
 * We don't suggest using  `openai` for the `source` since free accounts may reach limits quickly.
 
-## 3. Tweets Trading Environment 
+## 3. Trading Market 
 
 * In order to test the trading ability of the Chatgpt trading agent, a special trading environment was designed. This environment can not only be used for the Chatgpt trading agent but also used for the reinforcement learning. 
 
