@@ -3,7 +3,6 @@
 
 The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
 
-We start with natural language data.
 
 ## Data sources
 
