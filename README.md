@@ -27,6 +27,7 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 ## Large Language Models (LLM)
 ### 1. GPT-3
 ### 2. PaML
+### 3. [FinBERT](https://github.com/yya518/FinBERT)
 
 
 ## Next Steps
