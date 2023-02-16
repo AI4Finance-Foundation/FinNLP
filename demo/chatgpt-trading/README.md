@@ -39,7 +39,7 @@ Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as C
   "trade_volumn": 100,          # Volumns to trade
   ```
 
-## 4. Result
+## 4. Results
 
 * The result is shown as follows:
 
