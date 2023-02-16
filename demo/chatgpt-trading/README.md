@@ -1,4 +1,6 @@
-# ChatGPT trading
+# ChatGPT Trading Bot
+
+[ChatGPT for FinTech](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
 
 Let's fully use the ChatGPT to create an FinRL agent that trades as smartly as Chatgpt. The codes are available [here](https://github.com/oliverwang15/Alternative-Data/blob/main/demo/chatgpt-trading/main.ipynb)
 
