@@ -38,8 +38,9 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
         - _base.py
         - __init__.py
         - news
-            -akshare.py
-            -tushare.py
+            - akshare.py
+            - sina_finance.py
+            - tushare.py
         - social_media
             - stocktwits.py
             - twitter.py
