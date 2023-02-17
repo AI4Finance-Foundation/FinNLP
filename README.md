@@ -1,5 +1,4 @@
-# Natural Language Processing in Finance
-# 
+# Natural Language Dataset for Finance
 
 The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
 
