@@ -7,7 +7,7 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 ### 1. News
 
-  |                         Data Source                          |      Source      |                  Limits                   | Avaliable |
+  |                         Data Source                          |      Source Type      |                  Limits                   | Avaliable |
   | :----------------------------------------------------------: | :--------------: | :---------------------------------------: | :-------: |
   | [Sina Finance](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) | Official Website |                    N/A                    |     √     |
   |           [Yahoo Finance](https://news.yahoo.com/)           | Official Website |                    N/A                    |   Soon    |
@@ -19,7 +19,7 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 ### 2. Social Media
 
-  |   Data Source    | Source | Limits | Avaliable |
+  |   Data Source    | Source Type | Limits | Avaliable |
   | :--------------: | :----: | :----: | :-------: |
   | Twitter  | Official Website |   -    |  Soon  |
   | Weibo | Official Website |   -    |  Soon  |
@@ -27,7 +27,7 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 ### 3. Trends
 
-  |   Data Source    | Source | Limits | Avaliable |
+  |   Data Source    | Source Type | Limits | Avaliable |
   | :--------------: | :----: | :----: | :-------: |
   | Google Trends  | Official Website |   -    |  Soon  |
   | Baidu index | Official Website |   -    |  Soon  |
