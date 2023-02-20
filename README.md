@@ -9,23 +9,25 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 ### 1. News
 
-  |                         Data Source                          |      Source Type      |                  Limits                   | Avaliable |
-  | :----------------------------------------------------------: | :--------------: | :---------------------------------------: | :-------: |
-  | [Sina Finance](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) | Official Website |                    N/A                    |     √     |
-  |           [Yahoo Finance](https://news.yahoo.com/)           | Official Website |                    N/A                    |   Soon    |
-  | [Akshare CCTV](https://akshare.akfamily.xyz/data/others/others.html#id6) | Official Website |                    N/A                    |     √     |
-  | [Tushare Major News](https://tushare.pro/document/2?doc_id=195) |  Tushare Sever   | Account-specific（About ￥500 per year ） |     √     |
+|             Data Source              |    Source Type    |    Sources    |    Related Market    |    News Type    |    Specified Company    |          Limits          | Avaliable |
+| :-------------------------------: | :---------: | :-------------------------: | :-------: | :-------: | :-------: | :-------: | --------- |
+| [Sina Finance](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) | Official Website | Sina | CN Securities | Finance | × |           N/A           |   √   |
+|      [Yahoo Finance](https://news.yahoo.com/)      | Official Website | Yahoo | US Stocks | Finance | × |           N/A           |  Soon   |
+| [Finnhub](https://github.com/Finnhub-Stock-API/finnhub-python) | Gathering| Yahoo, SeekingAlpha, MarketWatch, CNBC, Fintel，Reuters, Associated Press, DowJones, Seeking Alpha, GuruFocus, Thefly.com, TalkMarkets, TipRanks, InvestorPlace, StockMarket，Alliance News, PennyStocks, Nasdaq ... | US Stocks | Finance | √ |Account-specific （Free）|√|
+| [Akshare CCTV](https://akshare.akfamily.xyz/data/others/others.html#id6) | Gathering | CCTV | CN Securities | Official | × |           N/A           |   √   |
+| [Tushare Major News](https://tushare.pro/document/2?doc_id=195) |  Gathering  |    |  CN Securities  |  Finance  |  ×  | Account-specific（About ￥500 per year ） |   √   |
 
 
 
 
 ### 2. Social Media
 
-  |   Data Source    | Source Type | Limits | Avaliable |
-  | :--------------: | :----: | :----: | :-------: |
-  | Twitter  | Official Website |   -    |  Soon  |
-  | Weibo | Official Website |   -    |  Soon  |
-  | StockTwits| Official Website |   -    |  Soon  |
+|  Data Source   | Source Type | Sources | Limits | Avaliable |
+| :--------------: | :----: | :----: | :-------: | :-------: |
+| Twitter  | Content | Twitter |  -   |  Soon  |
+| Weibo | Content | Weibo |  -   |  Soon  |
+| StockTwits| Content | StockTwits |  -   |  Soon  |
+| [Finnhub](https://finnhub.io/docs/api/social-sentiment)| Sentiment Score | Reddit、Twitter |  N/A  |  √  |
 
 ### 3. Trends
 
@@ -34,6 +36,13 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
   | Google Trends  | Official Website |   -    |  Soon  |
   | Baidu index | Official Website |   -    |  Soon  |
   | Weibo Trends| Official Website |   -    |  Soon  |
+
+### 4. Data Sets
+  |   Data Source    | Type | Stocks | Dates | Avaliable |
+  | :--------------: | :----: | :----: | :-------: | :--------------: |
+  | [AShare](https://github.com/JinanZou/Astock)  | News |   -   |   -   |  √  |
+  | [stocknet-dataset](https://github.com/yumoxu/stocknet-dataset) | Tweets |   87   |   2014-01-02 to 2015-12-30   |  √  |
+  | [CHRNN](https://github.com/wuhuizhe/CHRNN) | Tweets | 38 | 2017-01-03 to 2017-12-28 | √ |
 
 ### 4. Other resources
 

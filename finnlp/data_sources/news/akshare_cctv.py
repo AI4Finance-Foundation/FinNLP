@@ -4,7 +4,7 @@ from tqdm.notebook import tqdm
 from finnlp.data_sources.news._base import News_Downloader
 
 class Akshare_cctv(News_Downloader):
-    def __init__(self, args = None):
+    def __init__(self, args = {}):
         pass
 
     def download_news(self, start_date, end_date, stock = "all"):

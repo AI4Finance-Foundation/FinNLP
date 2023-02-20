@@ -1,4 +1,4 @@
-class News_Downloader:
+class Social_Media_Downloader:
 
     def __init__(self, args = {}):
         pass

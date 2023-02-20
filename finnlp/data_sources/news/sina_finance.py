@@ -8,7 +8,7 @@ from finnlp.data_sources.news._base import News_Downloader
 
 
 class Sina_Finance(News_Downloader):
-    def __init__(self,args = None):
+    def __init__(self,args = {}):
         self.dataframe = pd.DataFrame()
 
     def download_news(self,start_date,end_date,stock = "all"):
