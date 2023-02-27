@@ -44,9 +44,13 @@ class Finnhub_Sentiment(Social_Media_Downloader):
         twitter = res["twitter"]
         reddit = pd.DataFrame(reddit)
         # print(reddit)
-        reddit["atTime"] = pd.to_datetime(reddit["atTime"])
+        
         twitter = pd.DataFrame(twitter)
-        twitter["atTime"] = pd.to_datetime(twitter["atTime"])
+        try:
+            reddit["atTime"] = pd.to_datetime(reddit["atTime"],errors = "ignore")
+            twitter["atTime"] = pd.to_datetime(twitter["atTime"],errors = "ignore")
+        except:
+            pass
         time.sleep(self.delay)
         return reddit,symbol,twitter
 

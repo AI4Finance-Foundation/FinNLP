@@ -4,7 +4,7 @@ import pandas as pd
 import finnhub
 import time
 
-class Finnhub_News_xx(News_Downloader):
+class Finnhub_News(News_Downloader):
     def __init__(self, args = {}):
         assert "token" in args.keys(), "Please input your finnhub token. Avaliable at https://finnhub.io/dashboard"
         self.finnhub_client = finnhub.Client(api_key=args["token"])
