@@ -27,7 +27,6 @@ class Sina_Finance(News_Downloader):
         for page in range(100):
             url = f"https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2516&etime={start_timestamp}&stime={end_timestamp}&ctime={end_timestamp}&date={date}&k=&num=50&page={page}"
             response = requests.get(url = url)
-            response = requests.get(url = url)
             response.encoding = 'unicode'   
             text = response.text
             text = json.loads(text, strict=True)
