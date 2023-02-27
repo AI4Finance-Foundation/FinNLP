@@ -4,7 +4,7 @@ from lxml import etree
 from tqdm.notebook import tqdm
 import pandas as pd
 
-class Annoumcement_Downloader:
+class Sina_Annoumcement_Downloader:
 
     def __init__(self, args = {}):
         pass

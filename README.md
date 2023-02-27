@@ -12,7 +12,7 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 |             Data Source              |    Source Type    |    Sources    |    Related Market    |    News Type    |    Specified Company    |          Limits          | Avaliable |
 | :-------------------------------: | :---------: | :-------------------------: | :-------: | :-------: | :-------: | :-------: | --------- |
-| [Sina Finance](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) | Official Website | Sina | CN Securities | Finance | × |           N/A           |   √   |
+| [Sina Finance](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) | Official Website | Sina | CN Securities | Finance | × |           Not too much      |   √   |
 |      [Yahoo Finance](https://news.yahoo.com/)      | Official Website | Yahoo | US Stocks | Finance | × |           N/A           |  Soon   |
 | [Finnhub](https://github.com/Finnhub-Stock-API/finnhub-python) | Gathering| Yahoo, SeekingAlpha, MarketWatch, CNBC, Fintel，Reuters, Associated Press, DowJones, Seeking Alpha, GuruFocus, Thefly.com, TalkMarkets, TipRanks, InvestorPlace, StockMarket，Alliance News, PennyStocks, Nasdaq ... | US Stocks | Finance | √ |Account-specific （Free）|√|
 | [Akshare CCTV](https://akshare.akfamily.xyz/data/others/others.html#id6) | Gathering | CCTV | CN Securities | Official | × |           N/A           |   √   |
@@ -34,11 +34,18 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
   |   Data Source    | Source Type | Limits | Avaliable |
   | :--------------: | :----: | :----: | :-------: |
-  | Google Trends  | Official Website |   -    |  Soon  |
+  | [Google Trends](https://trends.google.com/trends/explore)  | Official Website |   N/A    |  √  |
   | Baidu index | Official Website |   -    |  Soon  |
   | Weibo Trends| Official Website |   -    |  Soon  |
 
-### 4. Data Sets
+### 4. Company Announcement
+
+  |   Data Source    | Source Type | Limits | Avaliable |
+  | :--------------: | :----: | :----: | :-------: |
+  | [Sina](https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml)  | Official Website |   Not too much    |  √  |
+
+
+### 5. Data Sets
   |   Data Source    | Type | Stocks | Dates | Avaliable |
   | :--------------: | :----: | :----: | :-------: | :--------------: |
   | [AShare](https://github.com/JinanZou/Astock)  | News |   -   |   -   |  √  |
