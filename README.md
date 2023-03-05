@@ -25,9 +25,9 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 |  Data Source   | Source Type | Sources | Limits | Avaliable |
 | :--------------: | :----: | :----: | :-------: | :-------: |
-| Twitter  | Content | Twitter |  -   |  Soon  |
+| Twitter  | Content | Twitter |  N/A   |  √  |
+| StockTwits| Content | StockTwits |  N/A   |  √  |
 | Weibo | Content | Weibo |  -   |  Soon  |
-| StockTwits| Content | StockTwits |  -   |  Soon  |
 | [Finnhub](https://finnhub.io/docs/api/social-sentiment)| Sentiment Score | Reddit、Twitter |  N/A  |  √  |
 
 ### 3. Trends
@@ -64,16 +64,17 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 ## Ⅲ. Files Structure
 
 ``` python
-- demo
 - finnlp
     - data_sources
-        - _base.py
-        - __init__.py
+        - company_announcement
+            - sina.py
         - news
             - akshare_cctv.py
+            - finnhub.py
             - sina_finance.py
-            - tushare.py
+            - tushare_major_news.py
         - social_media
+            - finnhub.py
             - stocktwits.py
             - twitter.py
             - weibo.py
@@ -81,7 +82,6 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
             - baidu.py
             - google.py
     - large_language_models
-        - __init__.py
         - embeddings
             - bert.py
             - finbert.py
@@ -90,7 +90,6 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
             - paml.py
 - .... 
 ```
-
 
 
 ## Ⅳ. Roadmaps
