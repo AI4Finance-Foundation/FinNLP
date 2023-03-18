@@ -10,90 +10,62 @@ The demos will be shown in [ChatGPT for FinTech](https://github.com/AI4Finance-F
 
 ### 1. News
 
-|             Data Source              |    Source Type    |    Sources    |    Related Market    |    News Type    |    Specified Company    |          Limits          | Avaliable |
-| :-------------------------------: | :---------: | :-------------------------: | :-------: | :-------: | :-------: | :-------: | --------- |
-| [Sina Finance](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) | Official Website | Sina | CN Securities | Finance | × |           Not too much      |   √   |
-|      [Yahoo Finance](https://news.yahoo.com/)      | Official Website | Yahoo | US Stocks | Finance | × |           N/A           |  Soon   |
-| [Finnhub](https://github.com/Finnhub-Stock-API/finnhub-python) | Gathering| Yahoo, SeekingAlpha, MarketWatch, CNBC, Fintel，Reuters, Associated Press, DowJones, Seeking Alpha, GuruFocus, Thefly.com, TalkMarkets, TipRanks, InvestorPlace, StockMarket，Alliance News, PennyStocks, Nasdaq ... | US Stocks | Finance | √ |Account-specific （Free）|√|
-| [Akshare CCTV](https://akshare.akfamily.xyz/data/others/others.html#id6) | Gathering | CCTV | CN Securities | Official | × |           N/A           |   √   |
-| [Tushare Major News](https://tushare.pro/document/2?doc_id=195) |  Gathering  |    |  CN Securities  |  Finance  |  ×  | Account-specific（About ￥500 per year ） |   √   |
-
+|                           Platform                           | Data Type  | Related Market |                         Data Source                          | Specified Company | Range  Type  |      Source Type      |                  Limits                   |
+| :----------------------------------------------------------: | :--------: | :------------: | :----------------------------------------------------------: | :---------------: | ---------- | :-------------------: | :---------------------------------------: |
+|              [Yahoo]((https://news.yahoo.com/))              |  Financial News   |   US Stocks    |    [Finnhub News](./finnlp/data_sources/news/finnhub.py)     |         √         | Date Range | Third party |         Account-specific （Free）         |
+| [Sina](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) |   Financial News    |   CN Stocks    |  [Sina Finance](./finnlp/data_sources/news/sina_finance.py)  |         ×         | Date Range |   Official     |               Not too much                |
+|             [CCTV](http://tv.cctv.com/lm/xwlb/)              | Governemnt News |   CN Stocks    |  [Akshare cctv](./finnlp/data_sources/news/akshare_cctv.py)  |         ×         | Date Range | Third party|                    N/A                    |
+|                   US Mainstream Media                   |   Financial News    |   US Stocks    |    [Finnhub News](./finnlp/data_sources/news/finnhub.py)     |         √         | Date Range |       Third party       |         Account-specific （Free）         |
+|                   CN Mainstream Media                   |   Financial News    |   CN Stocks    | [Tushare Major News](./finnlp/data_sources/news/tushare_major_news.py) |         ×         | Date Range |       Third party       | Account-specific（About ￥500 per year ） |
 
 
 
 ### 2. Social Media
 
-|  Data Source   | Source Type | Sources | Limits | Avaliable |
-| :--------------: | :----: | :----: | :-------: | :-------: |
-| Twitter  | Content | Twitter |  N/A   |  √  |
-| StockTwits| Content | StockTwits |  N/A   |  √  |
-| Weibo | Content | Weibo |  -   |  Soon  |
-| [Finnhub](https://finnhub.io/docs/api/social-sentiment)| Sentiment Score | Reddit、Twitter |  N/A  |  √  |
+|                           Platform                           | Data Type | Related Market |                         Data Source                          | Specified Company | Range Type | Source Type | Limits |
+| :----------------------------------------------------------: | :-------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :---------: | :----: |
+|              [Twitter](https://www.twitter.com)              |  Tweets   |   US Stocks    | [Twitter Downloader](./finnlp/data_sources/social_media/twitter.py) |         √         | Date Range |  Official   |  N/A   |
+|              [Twitter](https://www.twitter.com)              | Sentiment |   US Stocks    | [Finnhub Sentiment](./finnlp/data_sources/social_media/finnhub.py) |         √         | Date Range | Third Party |  N/A   |
+|            [StockTwits](https://stocktwits.com/)             |  Tweets   |   US Stocks    | [Stocktwits Downloader](./finnlp/data_sources/social_media/stocktwits.py) |         √         |  Lastest   |  Official   |  N/A   |
+| [Reddit (wallstreetbets)](https://www.reddit.com/r/wallstreetbets/new/) |  Threads  |   US Stocks    | [Reddit Downloader](./finnlp/data_sources/social_media/reddit.py) |         ×         |  Lastest   |  Official   |  N/A   |
+|              [Reddit](https://www.reddit.com/)               | Sentiment |   US Stocks    | [Finnhub Sentiment](./finnlp/data_sources/social_media/finnhub.py) |         √         | Date Range | Third Party |  N/A   |
+|                  [Weibo](https://weibo.com)                  |  Tweets   |   CN Stocks    |                             Soon                             |         -         |     -      |      -      |   -    |
 
-### 3. Trends
+### 3. Company Announcement
 
-  |   Data Source    | Source Type | Limits | Avaliable |
-  | :--------------: | :----: | :----: | :-------: |
-  | [Google Trends](https://trends.google.com/trends/explore)  | Official Website |   N/A    |  √  |
-  | Baidu index | Official Website |   -    |  Soon  |
-  | Weibo Trends| Official Website |   -    |  Soon  |
+  |                           Platform                           | Data Type | Related Market |                         Data Source                          | Specified Company | Range Type | Source Type |    Limits    |
+| :----------------------------------------------------------: | :-------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :---------: | :----------: |
+| [Sina](https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml) |   Text    |   CN Stocks    | [Sina Annoumcement Downloader](./finnlp/data_sources/company_announcement/sina.py) |         √         |  Lastest   |  Official   | Not too much |
 
-### 4. Company Announcement
+### 4. Trends
 
-  |   Data Source    | Source Type | Limits | Avaliable |
-  | :--------------: | :----: | :----: | :-------: |
-  | [Sina](https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml)  | Official Website |   Not too much    |  √  |
+|                         Platform                          | Data Type | Related Market |                       Data Source                       | Specified Company | Range Type | Source Type | Limits |
+| :-------------------------------------------------------: | :-------: | :------------: | :-----------------------------------------------------: | :---------------: | :--------: | :---------: | :----: |
+| [Google Trends](https://trends.google.com/trends/explore) |   Index   |   US Stocks    | [Google Trends](./finnlp/data_sources/trends/google.py) |         √         | Date Range |  Official   |  N/A   |
+|  [Baidu Index](https://index.baidu.com/v2/index.html#/)   |   Index   |   CN Stocks    |                          Soon                           |         -         |     -      |      -      |   -    |
 
 
 ### 5. Data Sets
   |   Data Source    | Type | Stocks | Dates | Avaliable |
   | :--------------: | :----: | :----: | :-------: | :--------------: |
-  | [AShare](https://github.com/JinanZou/Astock)  | News |   -   |   -   |  √  |
+  | [AShare](https://github.com/JinanZou/Astock)  | News |   3680   |   2018-07-01 to 2021-11-30   |  √  |
   | [stocknet-dataset](https://github.com/yumoxu/stocknet-dataset) | Tweets |   87   |   2014-01-02 to 2015-12-30   |  √  |
   | [CHRNN](https://github.com/wuhuizhe/CHRNN) | Tweets | 38 | 2017-01-03 to 2017-12-28 | √ |
 
-### 4. Other resources
-
-* [[Github] Google Trends Data for automated stock trading using Reinforcement learning.](https://github.com/Athe-kunal/Reinforcement-learning-trading-agent-using-Google-trends-data)
-
 ## Ⅱ. Large Language Models (LLM)
-*  GPT-3
-*  PaML
-*  [FinBERT](https://github.com/yya518/FinBERT)
-
-## Ⅲ. Files Structure
-
-``` python
-- finnlp
-    - data_sources
-        - company_announcement
-            - sina.py
-        - news
-            - akshare_cctv.py
-            - finnhub.py
-            - sina_finance.py
-            - tushare_major_news.py
-        - social_media
-            - finnhub.py
-            - stocktwits.py
-            - twitter.py
-            - weibo.py
-        - trends
-            - baidu.py
-            - google.py
-    - large_language_models
-        - embeddings
-            - bert.py
-            - finbert.py
-        - sentiment
-            - gpt3.py
-            - paml.py
-- .... 
-```
+### 1. Chat
+* [ChatGPT (GPT 3.5)](https://openai.com/blog/chatgpt)
+* [GPT 4.0](https://openai.com/research/gpt-4)
+* [ChatGLM](https://github.com/THUDM/ChatGLM-6B)
+* [PaLM](https://developers.googleblog.com/2023/03/announcing-palm-api-and-makersuite.html)
+* [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
 
 
-## Ⅳ. Roadmaps
-
-#### 1. Connect to existed News sources (新闻联播/Financial media..)
-#### 2. Connect to Google Trends / Baidu Index
-#### 3. Connect to Twitter / Weibo
+### 2. Sentiment/Embedding
+* [ChatGPT (GPT 3.5)](https://openai.com/blog/chatgpt)
+* [GPT 4.0](https://openai.com/research/gpt-4)
+* [ChatGLM](https://github.com/THUDM/ChatGLM-6B)
+* [PaLM](https://developers.googleblog.com/2023/03/announcing-palm-api-and-makersuite.html)
+* [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/)
+* [FinBERT](https://github.com/yya518/FinBERT)
+* [Hugging Face](https://huggingface.co/)
