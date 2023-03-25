@@ -35,7 +35,7 @@ The demos are shown in [ChatGPT for FinTech](https://github.com/AI4Finance-Found
 |                           Platform                           | Data Type | Related Market |                         Data Source                          | Specified Company | Range Type | Source Type |    Limits    |
 | :----------------------------------------------------------: | :-------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :---------: | :----------: |
 | [Juchao (Official Website)](http://www.cninfo.com.cn/new/index) |   Text    |   CN Stocks    | [Juchao Annoumcement Downloader](./finnlp/data_sources/company_announcement/juchao.py) |         √         | Date Range |  Official   | Not too much |
-|        [SEC(Official Website)](https://www.sec.gov/)         |   Text    |   US Stocks    |                             Soon                             |         √         | Date Range |  Official   | Not too much |
+|        [SEC (Official Website)](https://www.sec.gov/)         |   Text    |   US Stocks    |                             Soon                             |         √         | Date Range |  Official   | Not too much |
 | [Sina](https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml) |   Text    |   CN Stocks    | [Sina Annoumcement Downloader](./finnlp/data_sources/company_announcement/sina.py) |         √         |  Lastest   | Third Party | Not too much |
 
 ### 4. Trends
