@@ -1,16 +1,17 @@
 from finnlp.data_sources.social_media._base import Social_Media_Downloader
+
 from lxml import etree
 import requests
 import pandas as pd
 import json
 
 
-class Reddit_Downloader(Social_Media_Downloader):
+class Reddit_Streaming(Social_Media_Downloader):
 
     def __init__(self, args = {}):
         self.dataframe = pd.DataFrame()
 
-    def download_latest(self, pages = 1, stock = "all"):
+    def download_streaming_all(self, rounds = 3):
         # Download the first page by url
         base_url = "https://www.reddit.com/r/wallstreetbets/new/"
         headers = {

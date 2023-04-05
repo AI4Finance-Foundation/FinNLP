@@ -12,7 +12,7 @@ class News_Downloader:
     def clean_data(self):
         pass
 
-    def _gather_one_part_news(self, date, stock = None, delay = 0.1):
+    def _gather_one_part(self, date, stock = None, delay = 0.1):
         pass
     
     def _gather_content(self):

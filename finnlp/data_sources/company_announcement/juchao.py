@@ -1,3 +1,5 @@
+from finnlp.data_sources.company_announcement._base import Company_Announcement_Downloader
+
 import requests
 import time
 import json
@@ -6,12 +8,12 @@ import pandas as pd
 from tqdm.notebook import tqdm
 from PyPDF2 import PdfReader
 
-class Juchao_Annoumcement_Downloader:
+class Juchao_Annoumcement(Company_Announcement_Downloader):
 
     def __init__(self, args = {}):
         self.dataframe = pd.DataFrame()
 
-    def download(self,start_date, end_date, stock = "000001",max_page = 100, searchkey= "", get_content = False, save_dir = "./tmp/" , delate_pdf = False):
+    def download_date_range_stock(self,start_date, end_date, stock = "000001",max_page = 100, searchkey= "", get_content = False, save_dir = "./tmp/" , delate_pdf = False):
         self.org_dict = self._get_orgid()
 
         # download the first page

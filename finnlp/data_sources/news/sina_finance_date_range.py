@@ -4,11 +4,11 @@ import time
 import requests
 import pandas as pd
 from lxml import etree
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 from finnlp.data_sources.news._base import News_Downloader
 
 
-class Sina_Finance(News_Downloader):
+class Sina_Finance_Date_Range(News_Downloader):
 
     def __init__(self, args={}):
         self.dataframe = pd.DataFrame()
@@ -17,11 +17,11 @@ class Sina_Finance(News_Downloader):
         self.date_list = pd.date_range(start_date, end_date)
         res = pd.DataFrame()
         for date in tqdm(self.date_list, desc= "Downloading Titles"):
-            tmp = self._gather_one_part_news(date)
+            tmp = self._gather_one_day(date)
             res = pd.concat([res, tmp])
         self.dataframe = res
 
-    def _gather_one_part_news(self, date, stock = None, delay = 0.1):
+    def _gather_one_day(self, date, stock = None, delay = 0.1):
         end_timestamp = pd.to_datetime(f"{date} 16:00:00").timestamp()
         start_timestamp = end_timestamp - 60 * 60 * 24
 

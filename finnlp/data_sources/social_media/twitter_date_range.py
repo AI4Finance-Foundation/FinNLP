@@ -2,6 +2,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 from finnlp.data_sources.social_media._base import Social_Media_Downloader
+
 import requests
 from urllib import parse
 from tqdm.notebook import tqdm
@@ -10,16 +11,16 @@ import pandas as pd
 import json
 import time
 
-class Twitter_Downloader(Social_Media_Downloader):
+class Twitter_Date_Range(Social_Media_Downloader):
 
     def __init__(self, args = {}):
         self.dataframe = pd.DataFrame()
 
-    def download(self, start_date, end_date, stock = "AAPL"):
+    def download_date_range_stock(self, start_date, end_date, stock = "AAPL"):
         self.date_list = pd.date_range(start_date,end_date)
         res = pd.DataFrame()
         for date in tqdm(self.date_list):
-            tmp = self.download_one_day(date,stock)
+            tmp = self._gather_one_day(date,stock)
             res = pd.concat([res,tmp])
         
         res.created_at = pd.to_datetime(res.created_at)
@@ -30,7 +31,7 @@ class Twitter_Downloader(Social_Media_Downloader):
         res = res.reset_index(drop=True)
         self.dataframe = res
 
-    def download_one_day(self, date, stock = "AAPL",delay = 0.1):
+    def _gather_one_day(self, date, stock = "AAPL",pbar = None ,delay = 0.01):
         time.sleep(delay)
         # date = datetime.strptime(date,"%Y-%m-%d")
         next_date = date + timedelta(days=1)
@@ -61,4 +62,5 @@ class Twitter_Downloader(Social_Media_Downloader):
         res = requests.get(url.format(parse.quote(q)), headers=headers)
         res = json.loads(res.text)
         res = pd.DataFrame(res["globalObjects"]["tweets"]).T.sort_values("created_at")
+        
         return res

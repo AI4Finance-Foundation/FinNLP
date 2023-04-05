@@ -1,4 +1,5 @@
 from finnlp.data_sources.news._base import News_Downloader
+
 from tqdm import tqdm
 from lxml import etree
 import pandas as pd
@@ -7,7 +8,7 @@ import finnhub
 import time
 import json
 
-class Finnhub_News(News_Downloader):
+class Finnhub_Date_Range(News_Downloader):
     def __init__(self, args = {}):
         assert "token" in args.keys(), "Please input your finnhub token. Avaliable at https://finnhub.io/dashboard"
         self.finnhub_client = finnhub.Client(api_key=args["token"])
@@ -30,7 +31,7 @@ class Finnhub_News(News_Downloader):
                 date_list = date_list[days_each_time:]
                 tmp_start_date = tmp_date_list[0].strftime("%Y-%m-%d")
                 tmp_end_date = tmp_date_list[-1].strftime("%Y-%m-%d")
-                res = self._gather_one_part_news(tmp_start_date,tmp_end_date,stock = stock )
+                res = self._gather_one_part(tmp_start_date,tmp_end_date,stock = stock )
                 self.dataframe = pd.concat([self.dataframe,res])
                 bar.update(1)
 
@@ -38,7 +39,7 @@ class Finnhub_News(News_Downloader):
         self.dataframe.datetime = pd.to_datetime(self.dataframe.datetime,unit = "s")
         self.dataframe = self.dataframe.reset_index(drop = True)
 
-    def _gather_one_part_news(self, start_date, end_date, stock = "AAPL", delay = 1):
+    def _gather_one_part(self, start_date, end_date, stock = "AAPL", delay = 1):
         res = self.finnhub_client.company_news(stock, _from=start_date, to=end_date)
         time.sleep(delay)
         return pd.DataFrame(res) 
@@ -144,7 +145,7 @@ class Finnhub_News(News_Downloader):
             
             # TalkMarkets
             elif source == "TalkMarkets":
-                pass
+                return "Not supported yet"
 
             # CNBC
             elif source == "CNBC":

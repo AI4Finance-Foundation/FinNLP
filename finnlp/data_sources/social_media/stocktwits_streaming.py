@@ -5,12 +5,12 @@ import pandas as pd
 from tqdm.notebook import tqdm
 import json
 
-class Stocktwits_Downloader(Social_Media_Downloader):
+class Stocktwits_Streaming(Social_Media_Downloader):
 
     def __init__(self, args = {}):
         self.dataframe = pd.DataFrame()
 
-    def download_newest(self, stock = "AAPL", rounds = 3):
+    def download_streaming_stock(self, stock = "AAPL", rounds = 3):
         url = f"https://api.stocktwits.com/api/2/streams/symbol/{stock}.json"
         headers = {
             'accept': 'application/json',
@@ -47,12 +47,3 @@ class Stocktwits_Downloader(Social_Media_Downloader):
                 self.dataframe = pd.concat([self.dataframe,res])
         
         self.dataframe = self.dataframe.reset_index(drop = True)
-
-    def clean_data(self):
-        pass
-
-    def gather_one_day_news(self,date,stock = "all",delay = 0.1):
-        pass
-
-    def transfer_standard_date_to_nonstandard(self,date):
-        pass
