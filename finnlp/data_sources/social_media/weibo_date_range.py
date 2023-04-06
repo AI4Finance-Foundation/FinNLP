@@ -12,6 +12,7 @@ import re
 
 class Weibo_Date_Range(Social_Media_Downloader):
     def __init__(self, args = {}):
+        super().__init__(args)
         if "cookies" not in args.keys():
             raise ValueError("You need first log in at https://weibo.com/ and then copy you cookies and use it as the [value] of [key] \'cookies\' ")
         self.cookies = args["cookies"]
@@ -59,13 +60,13 @@ class Weibo_Date_Range(Social_Media_Downloader):
         }
 
         url = f"https://s.weibo.com/weibo"
-        resp = requests.get(url, headers=headers, params = params)
+        resp = self._request_get(url, headers=headers, params = params)
         
+        if resp is None:
+            return "Error"
+
         if "passport.weibo.com" in resp.url:
             raise ValueError("Your cookies is useless. Please first log in at https://weibo.com/ and then copy you cookies and use it as the [value] of [key] \'cookies\' ")
-        
-        if resp.status_code != 200:
-            return "Error"
 
         res = etree.HTML(resp.content)
         # get all pages
@@ -110,13 +111,13 @@ class Weibo_Date_Range(Social_Media_Downloader):
             "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0", 
             }
         
-        resp = requests.get(url, headers=headers)
+        resp = self._request_get(url, headers=headers)
+
+        if resp is None:
+            return "Error"
 
         if "passport.weibo.com" in resp.url:
             raise ValueError("Your cookies is useless. Please first log in at https://weibo.com/ and then copy you cookies and use it as the [value] of [key] \'cookies\' ")
-        
-        if resp.status_code != 200:
-            return "Error"
 
         res = etree.HTML(resp.content)
         # get all pages

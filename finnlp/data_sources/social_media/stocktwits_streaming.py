@@ -8,6 +8,7 @@ import json
 class Stocktwits_Streaming(Social_Media_Downloader):
 
     def __init__(self, args = {}):
+        super().__init__(args)
         self.dataframe = pd.DataFrame()
 
     def download_streaming_stock(self, stock = "AAPL", rounds = 3):
@@ -36,10 +37,10 @@ class Stocktwits_Streaming(Social_Media_Downloader):
                 "limit":1000,
                 "max":max,
                 }
-            response = requests.get(url = url,headers=headers,params=params)
-            if response.status_code != 200:
+            response = self._request_get(url = url, headers=headers, params=params)
+            if response is None:
                 print(f"Fetch data fail. Please check your stock name :{stock} and connections. You may raise an issue if you can't solve this problem")
-                break
+                continue
             else:
                 res = json.loads(response.text)
                 max = res["cursor"]["since"]

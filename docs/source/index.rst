@@ -10,7 +10,8 @@ Welcome to FinNLP's documentation!
    :maxdepth: 1
    :caption: Contents:
 
-   notebooks/Data Sources/News/Sina Finance.ipynb
+   notebooks/Data Sources/news.rst
+   notebooks/Data Sources/news_notebook.ipynb
    notebooks/Data Sources/Social Media/Twitter.ipynb
 
 

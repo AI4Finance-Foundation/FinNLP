@@ -31,8 +31,8 @@ class SEC_Annoumcement(Company_Announcement_Downloader):
         params = {
             "keysTyped":stock
         }
-        resp = requests.get(url = url, headers= headers, params= params)
-        if resp.status_code != 200:
+        resp = self._request_get(url = url, headers= headers, params= params)
+        if resp is None:
             raise ConnectionError("Can't get entity name")
         
         res = json.loads(resp.text)
@@ -63,9 +63,9 @@ class SEC_Annoumcement(Company_Announcement_Downloader):
             "page" : page,
         }
 
-        resp = requests.get(url = url, headers= headers, params= params)
+        resp = self._request_get(url = url, headers= headers, params= params)
         
-        if resp.status_code != 200:
+        if resp is None:
             return 'Error'
         res = json.loads(resp.text)
 
@@ -93,8 +93,8 @@ class SEC_Annoumcement(Company_Announcement_Downloader):
                 url_new = f"{url_base}/{url_first}/{url_second}/{url_third}/{url_fourth}"
             else:
                 url_new = f"{url_base}/{url_first}/{url_second}/{url_fourth}"
-            respn = requests.get(url = url_new, headers= headers)
-            if respn.status_code != 200:
+            respn = self._request_get(url = url_new, headers= headers)
+            if respn is None:
                 continue
 
             res = etree.HTML(respn.text)

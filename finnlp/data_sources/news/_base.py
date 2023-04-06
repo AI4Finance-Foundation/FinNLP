@@ -1,6 +1,9 @@
-class News_Downloader:
+from finnlp.data_sources._base import FinNLP_Downloader
+
+class News_Downloader(FinNLP_Downloader):
     
     def __init__(self, args = {}):
+        super().__init__(args)
         pass
 
     def download_date_range(self, start_date, end_date, stock = None):

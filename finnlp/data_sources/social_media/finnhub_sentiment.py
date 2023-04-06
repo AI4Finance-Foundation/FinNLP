@@ -6,6 +6,7 @@ import time
 
 class Finnhub_Sentiment(Social_Media_Downloader):
     def __init__(self, args = {}):
+        super().__init__(args)
         assert "token" in args.keys(), "Please input your finnhub token. Avaliable at https://finnhub.io/dashboard"
         self.finnhub_client = finnhub.Client(api_key=args["token"])
         self.delay = args["delay"] if "dalay" in args.keys() else 0.7
@@ -34,9 +35,6 @@ class Finnhub_Sentiment(Social_Media_Downloader):
         self.reddit = self.reddit.sort_values("atTime")
         self.twitter = self.twitter.sort_values("atTime")
 
-    def clean_data(self):
-        pass
-
     def gather_one_day_sentiment(self,start_date, end_date, stock = "APPL"):
         res  = self.finnhub_client.stock_social_sentiment(stock, _from=start_date, to=end_date)
         reddit = res["reddit"]
@@ -53,6 +51,3 @@ class Finnhub_Sentiment(Social_Media_Downloader):
             pass
         time.sleep(self.delay)
         return reddit,symbol,twitter
-
-    def transfer_standard_date_to_nonstandard(self,date):
-        pass

@@ -11,6 +11,7 @@ from PyPDF2 import PdfReader
 class Juchao_Annoumcement(Company_Announcement_Downloader):
 
     def __init__(self, args = {}):
+        super().__init__(args)
         self.dataframe = pd.DataFrame()
 
     def download_date_range_stock(self,start_date, end_date, stock = "000001",max_page = 100, searchkey= "", get_content = False, save_dir = "./tmp/" , delate_pdf = False):
@@ -91,10 +92,10 @@ class Juchao_Annoumcement(Company_Announcement_Downloader):
         adjunctUrl = x.adjunctUrl
         pdf_base_url = "http://static.cninfo.com.cn/"
         pdf_url = pdf_base_url + adjunctUrl
-        responsepdf = requests.get(pdf_url)
+        responsepdf = self._request_get(pdf_url)
         
 
-        if responsepdf.status_code != 200:
+        if responsepdf is None:
             pbar.update(1)
             return ("Failed Download","Failed Download")
 
@@ -129,7 +130,7 @@ class Juchao_Annoumcement(Company_Announcement_Downloader):
 
     def _get_orgid(self):
         org_dict = {}
-        org_json = requests.get("http://www.cninfo.com.cn/new/data/szse_stock.json").json()["stockList"]
+        org_json = self._request_get("http://www.cninfo.com.cn/new/data/szse_stock.json").json()["stockList"]
 
         for i in range(len(org_json)):
             org_dict[org_json[i]["code"]] = org_json[i]["orgId"]

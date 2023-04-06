@@ -10,6 +10,7 @@ import re
 
 class Weibo_Streaming(Social_Media_Downloader):
     def __init__(self, args = {}):
+        super().__init__(args)
         self.dataframe = pd.DataFrame()
 
     def download_streaming_stock(self, stock = "茅台", rounds = 3):
@@ -27,9 +28,9 @@ class Weibo_Streaming(Social_Media_Downloader):
             "page":page
         }
         url = f"https://m.weibo.cn/api/container/getIndex"
-        resp = requests.get(url, headers=headers, params = params)
+        resp = self._request_get(url, headers=headers, params = params)
 
-        if resp.status_code != 200:
+        if resp is None:
             return "Error"
         
         res = json.loads(resp.text)
@@ -55,8 +56,8 @@ class Weibo_Streaming(Social_Media_Downloader):
             headers = {
                 "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
             }
-            resp = requests.get(url_new, headers=headers) 
-            if resp.status_code != 200:
+            resp = self._request_get(url_new, headers= headers) 
+            if resp is None:
                 content = content_short
             else:
                 res = etree.HTML(resp.content)

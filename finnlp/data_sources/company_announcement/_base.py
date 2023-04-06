@@ -1,6 +1,9 @@
-class Company_Announcement_Downloader:
+from finnlp.data_sources._base import FinNLP_Downloader
+
+class Company_Announcement_Downloader(FinNLP_Downloader):
 
     def __init__(self, args = {}):
+        super().__init__(args)
         pass
 
     def download_date_range_all(self, start_date, end_date):

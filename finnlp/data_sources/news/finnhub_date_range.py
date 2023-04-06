@@ -10,6 +10,7 @@ import json
 
 class Finnhub_Date_Range(News_Downloader):
     def __init__(self, args = {}):
+        super().__init__(args)
         assert "token" in args.keys(), "Please input your finnhub token. Avaliable at https://finnhub.io/dashboard"
         self.finnhub_client = finnhub.Client(api_key=args["token"])
 
@@ -49,17 +50,17 @@ class Finnhub_Date_Range(News_Downloader):
         self.dataframe["content"] = self.dataframe.apply(lambda x:self._gather_content_apply(x, pbar, delay), axis = 1)
 
     def _gather_content_apply(self,x, pbar, delay = 0.01):
+        time.sleep(delay)
         url = x.url
         source = x.source
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0"
-        }
-        response = requests.get(url= url, headers= headers)
-        if response.status_code != 200:
+        response = self._request_get(url = url)
+        # response = self._request_get(url= url, headers= headers)
+        pbar.update(1)
+        if response is None:
             return "Connection Error"
         else:
             page = etree.HTML(response.text)
-
+        
         try:
             # Yahoo Finance
             if source == "Yahoo":
@@ -107,8 +108,8 @@ class Finnhub_Date_Range(News_Downloader):
                 # first get Seeking Alpha URL
                 page = page.xpath('/html/body/div[5]/div[2]/section[1]/article[2]/div/div[2]/p/a/@href')
                 url_new = page[0]
-                response = requests.get(url= url_new, headers= headers)
-                if response.status_code != 200:
+                response = self._request_get(url= url_new)
+                if response is None:
                     return "Connection Error"
                 else:
                     page = etree.HTML(response.text)
@@ -129,8 +130,8 @@ class Finnhub_Date_Range(News_Downloader):
             elif source == "Thefly.com":
                 page = page.xpath('/html/body/div[5]/div[2]/section[1]/article[2]/div/div[2]/p/a/@href')
                 url_new = page[0]
-                response = requests.get(url= url_new, headers= headers, verify= False)
-                if response.status_code != 200:
+                response = self._request_get(url= url_new, verify= False)
+                if response is None:
                     return "Connection Error"
                 else:
                     page = etree.HTML(response.text)
@@ -158,8 +159,8 @@ class Finnhub_Date_Range(News_Downloader):
             elif source == "GuruFocus":
                 page = page.xpath('/html/body/div[5]/div[2]/section[1]/article[2]/div/div[2]/p/a/@href')
                 url_new = page[0]
-                response = requests.get(url= url_new, headers= headers)
-                if response.status_code != 200:
+                response = self._request_get(url= url_new)
+                if response is None:
                     return "Connection Error"
                 else:
                     page = etree.HTML(response.text)
@@ -182,8 +183,8 @@ class Finnhub_Date_Range(News_Downloader):
             elif source == "InvestorPlace":
                 page = page.xpath('/html/body/div[5]/div[2]/section[1]/article[2]/div/div[2]/p/a/@href')
                 url_new = page[0]
-                response = requests.get(url= url_new, headers= headers)
-                if response.status_code != 200:
+                response = self._request_get(url= url_new)
+                if response is None:
                     return "Connection Error"
                 else:
                     page = etree.HTML(response.text)
@@ -198,8 +199,8 @@ class Finnhub_Date_Range(News_Downloader):
             elif source == "TipRanks":
                 page = page.xpath('/html/body/div[5]/div[2]/section[1]/article[2]/div/div[2]/p/a/@href')
                 url_new = page[0]
-                response = requests.get(url= url_new, headers= headers)
-                if response.status_code != 200:
+                response = self._request_get(url= url_new)
+                if response is None:
                     return "Connection Error"
                 else:
                     page = etree.HTML(response.text)
@@ -215,3 +216,4 @@ class Finnhub_Date_Range(News_Downloader):
         
         except:
             return "Error"
+

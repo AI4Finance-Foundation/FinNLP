@@ -9,17 +9,15 @@ import json
 class Reddit_Streaming(Social_Media_Downloader):
 
     def __init__(self, args = {}):
+        super().__init__(args)
         self.dataframe = pd.DataFrame()
 
     def download_streaming_all(self, rounds = 3):
         # Download the first page by url
         base_url = "https://www.reddit.com/r/wallstreetbets/new/"
-        headers = {
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
-        }
 
-        res = requests.get(url = base_url, headers= headers)
-        if res.status_code != 200:
+        res = self._request_get(base_url)
+        if res is None:
             raise ConnectionError
         
         # get the info from init page
