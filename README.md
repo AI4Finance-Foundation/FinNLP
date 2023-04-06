@@ -30,6 +30,8 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
   selected_columns = ["headline", "content"]
   df[selected_columns].head(10)
   
+  --------------------
+  
   	headline										content
   0	My 26-Stock $349k Portfolio Gets A Nice Petrob...	Home\nInvesting Strategy\nPortfolio Strategy\n...
   1	Apple’s Market Cap Slides Below $2 Trillion fo...	Error
@@ -61,11 +63,13 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
     
     news_downloader = Sina_Finance_Date_Range(config)                # init
     news_downloader.download_date_range_all(start_date,end_date)	 # Download headers
-    news_downloader.gather_content()							   # Download contents
+    news_downloader.gather_content()		   # Download contents
     
     df = news_downloader.dataframe
     selected_columns = ["title", "content"]
     df[selected_columns].head(10)
+    
+    --------------------
     
         title	                           content
     0	分析师：伊朗重回国际原油市场无法阻止	新浪美股讯 北京时间1月1日晚CNBC称，加拿大皇家银行（RBC）分析师Helima Cro...
