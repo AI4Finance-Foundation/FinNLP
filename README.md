@@ -11,6 +11,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 * US
 
   ``` python
+  # Finnhub (Yahoo Finance, Reuters, SeekingAlpha, CNBC...)
   from finnlp.data_sources.news.finnhub_date_range import Finnhub_Date_Range
   
   start_date = "2023-01-01"
