@@ -63,7 +63,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
     
     news_downloader = Sina_Finance_Date_Range(config)                # init
     news_downloader.download_date_range_all(start_date,end_date)	 # Download headers
-    news_downloader.gather_content()		   # Download contents
+    news_downloader.gather_content()		                        # Download contents
     
     df = news_downloader.dataframe
     selected_columns = ["title", "content"]
@@ -71,7 +71,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
     
     --------------------
     
-        title	                           content
+          title	                                 content
     0	分析师：伊朗重回国际原油市场无法阻止	新浪美股讯 北京时间1月1日晚CNBC称，加拿大皇家银行（RBC）分析师Helima Cro...
     1	FAA：波音767的逃生扶梯存在缺陷	新浪美股讯 北京时间1日晚，美国联邦航空局（FAA）要求航空公司对波音767机型的救生扶梯进...
     2	非制造业新订单指数创新高 需求回升力度明显	中新社北京1月1日电 （记者 刘长忠）记者1日从中国物流与采购联合会获悉，在最新发布的201...
