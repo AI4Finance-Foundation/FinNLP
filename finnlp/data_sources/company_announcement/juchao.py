@@ -5,7 +5,7 @@ import time
 import json
 import os
 import pandas as pd
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 from PyPDF2 import PdfReader
 
 class Juchao_Annoumcement(Company_Announcement_Downloader):
@@ -44,8 +44,8 @@ class Juchao_Annoumcement(Company_Announcement_Downloader):
         self.dataframe.announcementTime = self.dataframe.announcementTime.apply(lambda x:time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(x/1000)))
         self.dataframe.announcementTime = pd.to_datetime(self.dataframe.announcementTime)
         
-        pbar = tqdm(total=self.dataframe.shape[0], desc="Getting the text data...")
         if get_content:
+            pbar = tqdm(total=self.dataframe.shape[0], desc="Getting the text data...")
             self.dataframe[["PDF_path","Content"]] = self.dataframe.apply(lambda x: self._get_pdfs(x,save_dir, delate_pdf, pbar),axis= 1,result_type  = "expand")
         if delate_pdf:
             os.removedirs(save_dir)

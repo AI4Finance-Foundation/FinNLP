@@ -65,8 +65,8 @@ def get_china_free_proxy(pages = 10):
 
     can_use = check_china_ips(proxies_list)
 
-    print( f'获取到的代理ip数量: {len(proxies_list)} 。Get proxy ips: {len(proxies_list)}.')
-    print( f'能用的代理数量： {len(can_use)}。Usable proxy ips: {len(can_use)}.' )
+    print(f'获取到的代理ip数量: {len(proxies_list)} 。Get proxy ips: {len(proxies_list)}.')
+    print(f'能用的代理数量： {len(can_use)}。Usable proxy ips: {len(can_use)}.' )
 
     return can_use
 
@@ -98,8 +98,8 @@ def get_us_free_proxy(pages = 10):
     total = pages* 15
     proxies_list = proxies_list[:total] 
     can_use = check_us_ips(proxies_list)
-    print( f'Get proxy ips: {len(proxies_list)}.')
-    print( f'Usable proxy ips: {len(can_use)}.' )
+    print(f'Get proxy ips: {len(proxies_list)}.')
+    print(f'Usable proxy ips: {len(can_use)}.' )
 
     return can_use
 

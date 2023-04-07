@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 from finnlp.data_sources.news._base import News_Downloader
 
 from tqdm import tqdm

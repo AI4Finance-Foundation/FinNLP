@@ -2,7 +2,7 @@ from finnlp.data_sources.social_media._base import Social_Media_Downloader
 
 import requests
 import pandas as pd
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import json
 
 class Stocktwits_Streaming(Social_Media_Downloader):

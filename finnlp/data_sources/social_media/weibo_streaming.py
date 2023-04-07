@@ -16,7 +16,7 @@ class Weibo_Streaming(Social_Media_Downloader):
     def download_streaming_stock(self, stock = "茅台", rounds = 3):
         for r in tqdm(range(rounds), desc="Downloading by page.."):
             page = r+1
-            self._gather_one_page(page)
+            self._gather_one_page(page, stock)
 
     def _gather_one_page(self,page, stock = "茅台", delay = 0.01):
         headers = {

@@ -50,9 +50,23 @@ class FinNLP_Downloader:
             except:
                 response = None
 
-        if response.status_code != 200:
+        if response is not None and response.status_code != 200:
             response = None
 
         return response
     
+    def _request_post(self, url, headers, json):
+        max_retry = self.max_retry
+        proxies = self._get_proxy()
+        for _ in range(max_retry):
+            try:
+                response = requests.post(url = url, headers = headers, json = json, proxies = proxies)
+                if response.status_code == 200:
+                    break
+            except:
+                response = None
 
+        if response is not None and response.status_code != 200:
+            response = None
+
+        return response
