@@ -103,3 +103,15 @@ def get_us_free_proxy(pages = 10):
 
     return can_use
 
+class Kuaidaili:
+    def __init__(self, tunnel, username, password):
+        self.tunnel = tunnel
+        self.username = username
+        self.password = password
+
+    def get_kuaidaili_tunnel_proxy(self):
+        proxies = {
+            "http": "http://%(user)s:%(pwd)s@%(proxy)s/" % {"user": self.username, "pwd": self.password, "proxy": self.tunnel},
+            "https": "http://%(user)s:%(pwd)s@%(proxy)s/" % {"user": self.username, "pwd": self.password, "proxy": self.tunnel}
+        }
+        return proxies

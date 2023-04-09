@@ -14,14 +14,14 @@ class Sina_Finance_Date_Range(News_Downloader):
         super().__init__(args)
         self.dataframe = pd.DataFrame()
 
-    def download_date_range_all(self, start_date, end_date, stock = None):
+    def download_date_range_all(self, start_date, end_date):
         self.date_list = pd.date_range(start_date, end_date)
         for date in tqdm(self.date_list, desc= "Downloading Titles..."):
             tmp = self._gather_one_day(date)
             self.dataframe = pd.concat([self.dataframe, tmp])
         self.dataframe = self.dataframe.reset_index(drop = True)
 
-    def _gather_one_day(self, date, stock = None, delay = 0.1):
+    def _gather_one_day(self, date, delay = 0.1):
         end_timestamp = pd.to_datetime(f"{date} 16:00:00").timestamp()
         start_timestamp = end_timestamp - 60 * 60 * 24
 
