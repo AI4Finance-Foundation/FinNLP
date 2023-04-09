@@ -1,4 +1,4 @@
-# Natural Language Dataset for Finance
+# Internet-scale Financial Data
 
 The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
 
