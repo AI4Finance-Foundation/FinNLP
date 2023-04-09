@@ -81,9 +81,41 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
     # 7	过半城市房价环比上涨 百城住宅均价加速升温	    资料图。中新社记者 武俊杰 摄\n中新社北京1月1日电 (记者 庞无忌)中国房地产市场在20...
     # 8	经济学人：巴西病根到底在哪里	              新浪美股北京时间1日讯 原本，巴西人是该高高兴兴迎接2016年的。8月间，里约热内卢将举办南...
     # 9	中国首家国有船厂破产倒闭:五洲船舶目前已停工	 低迷的中国造船市场，多年来首次出现国有船厂破产清算的一幕。浙江海运集团旗下的五洲船舶修造公司...
+    
+    # Easymoney
+    from finnlp.data_sources.news.eastmoney_streaming import Eastmoney_Streaming
+    
+    pages = 3
+    stock = "600519"
+    config = {
+        "use_proxy": "china_free",
+        "max_retry": 5,
+        "proxy_pages": 5,
+    }
+    
+	news_downloader = Eastmoney_Streaming(config)
+	news_downloader.download_streaming_stock(stock,pages)
+	df = news_downloader.dataframe
+	selected_columns = ["title", "create time"]
+    df[selected_columns].head(10)
+    
+    --------------------
+    
+    #     title	create time
+    # 0	茅台2022年报的12个小秘密	04-09 19:40
+    # 1	东北证券维持贵州茅台买入评级 预计2023年净利润同比	04-09 11:24
+    # 2	贵州茅台：融资余额169.34亿元，创近一年新低（04-07	04-08 07:30
+    # 3	贵州茅台：融资净买入1248.48万元，融资余额169.79亿	04-07 07:28
+    # 4	贵州茅台公益基金会正式成立	04-06 12:29
+    # 5	贵州茅台04月04日获沪股通增持19.55万股	04-05 07:48
+    # 6	贵州茅台：融资余额169.66亿元，创近一年新低（04-04	04-05 07:30
+    # 7	4月4日北向资金最新动向（附十大成交股）	04-04 18:48
+    # 8	大宗交易：贵州茅台成交235.9万元，成交价1814.59元（	04-04 17:21
+    # 9	第一上海证券维持贵州茅台买入评级 目标价2428.8元	04-04 09:30
     ```
 
 ### 2. Social Media
+
 * US
 
   ``` python
