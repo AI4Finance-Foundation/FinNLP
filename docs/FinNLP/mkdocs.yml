@@ -1,0 +1,24 @@
+site_name: FinNLP
+site_author: Oliver Wang, Xiao-yang Liu
+
+nav:
+  - Home: index.md
+  - News: jupyter/Data_Sources_News.ipynb
+  - Social Media: jupyter/Data_Sources_Social_Media.ipynb
+  - Company Announcement: jupyter/Data_Sources_Company_Announcement.ipynb
+
+theme: 
+  name: material
+
+plugins:
+  - mkdocs-jupyter:
+     execute: false
+
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh

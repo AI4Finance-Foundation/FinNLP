@@ -1,0 +1,742 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Oliver Wang, Xiao-yang Liu">
+      
+      
+      
+      
+        <link rel="next" href="jupyter/Data_Sources_News/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>FinNLP</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#internet-scale-financial-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="FinNLP" class="md-header__button md-logo" aria-label="FinNLP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FinNLP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="FinNLP" class="md-nav__button md-logo" aria-label="FinNLP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    FinNLP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-data-sources" class="md-nav__link">
+    Supported Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-news" class="md-nav__link">
+    1. News
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-social-media" class="md-nav__link">
+    2. Social Media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-company-announcement" class="md-nav__link">
+    3. Company Announcement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-trends" class="md-nav__link">
+    4. Trends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-data-sets" class="md-nav__link">
+    5. Data Sets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-large-language-models-llms" class="md-nav__link">
+    Related Large Language Models (LLMs)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jupyter/Data_Sources_News/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jupyter/Data_Sources_Social_Media/" class="md-nav__link">
+        Social Media
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jupyter/Data_Sources_Company_Announcement/" class="md-nav__link">
+        Company Announcement
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-data-sources" class="md-nav__link">
+    Supported Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Data Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-news" class="md-nav__link">
+    1. News
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-social-media" class="md-nav__link">
+    2. Social Media
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-company-announcement" class="md-nav__link">
+    3. Company Announcement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-trends" class="md-nav__link">
+    4. Trends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-data-sets" class="md-nav__link">
+    5. Data Sets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-large-language-models-llms" class="md-nav__link">
+    Related Large Language Models (LLMs)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="internet-scale-financial-data">Internet-scale Financial Data</h1>
+<p>The demos are shown in <a href="https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech">FinGPT</a></p>
+<p><strong>Disclaimer: We are sharing codes for academic purpose under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money. Please use common sense and always first consult a professional before trading or investing.</strong></p>
+<h2 id="supported-data-sources">Supported Data Sources</h2>
+<h3 id="1-news">1. <a href="" title="jupyter/Data_Sources_News/">News</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Platform</th>
+<th align="center">Data Type</th>
+<th align="center">Related Market</th>
+<th align="center">Data Source</th>
+<th align="center">Specified Company</th>
+<th>Range  Type</th>
+<th align="center">Source Type</th>
+<th align="center">Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="(https://news.yahoo.com/)">Yahoo</a></td>
+<td align="center">Financial News</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/news/finnhub.py">Finnhub News</a></td>
+<td align="center">√</td>
+<td>Date Range</td>
+<td align="center">Third party</td>
+<td align="center">Account-specific （Free）</td>
+</tr>
+<tr>
+<td align="center"><a href="https://news.sina.com.cn/roll/#pageid=153&amp;lid=2516&amp;k=&amp;num=50&amp;page=1">Sina</a></td>
+<td align="center">Financial News</td>
+<td align="center">CN Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/news/sina_finance.py">Sina Finance</a></td>
+<td align="center">×</td>
+<td>Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="http://tv.cctv.com/lm/xwlb/">CCTV</a></td>
+<td align="center">Governemnt News</td>
+<td align="center">CN Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/news/akshare_cctv.py">Akshare cctv</a></td>
+<td align="center">×</td>
+<td>Date Range</td>
+<td align="center">Third party</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center">US Mainstream Media</td>
+<td align="center">Financial News</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/news/finnhub.py">Finnhub News</a></td>
+<td align="center">√</td>
+<td>Date Range</td>
+<td align="center">Third party</td>
+<td align="center">Account-specific （Free）</td>
+</tr>
+<tr>
+<td align="center">CN Mainstream Media</td>
+<td align="center">Financial News</td>
+<td align="center">CN Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/news/tushare_major_news.py">Tushare Major News</a></td>
+<td align="center">×</td>
+<td>Date Range</td>
+<td align="center">Third party</td>
+<td align="center">Account-specific（About ￥500 per year ）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-social-media">2. <a href="">Social Media</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Platform</th>
+<th align="center">Data Type</th>
+<th align="center">Related Market</th>
+<th align="center">Data Source</th>
+<th align="center">Specified Company</th>
+<th align="center">Range Type</th>
+<th align="center">Source Type</th>
+<th align="center">Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://www.twitter.com">Twitter</a></td>
+<td align="center">Tweets</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/social_media/twitter.py">Twitter Downloader</a></td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.twitter.com">Twitter</a></td>
+<td align="center">Sentiment</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/social_media/finnhub.py">Finnhub Sentiment</a></td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Third Party</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://stocktwits.com/">StockTwits</a></td>
+<td align="center">Tweets</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/social_media/stocktwits.py">Stocktwits Downloader</a></td>
+<td align="center">√</td>
+<td align="center">Lastest</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.reddit.com/r/wallstreetbets/new/">Reddit (wallstreetbets)</a></td>
+<td align="center">Threads</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/social_media/reddit.py">Reddit Downloader</a></td>
+<td align="center">×</td>
+<td align="center">Lastest</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.reddit.com/">Reddit</a></td>
+<td align="center">Sentiment</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/social_media/finnhub.py">Finnhub Sentiment</a></td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Third Party</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://weibo.com">Weibo</a></td>
+<td align="center">Tweets</td>
+<td align="center">CN Stocks</td>
+<td align="center"><a href="">Weibo Date Range</a>/<a href="">Weibo Streaming</a></td>
+<td align="center">√</td>
+<td align="center">Date Range/Lastest</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-company-announcement">3. <a href="">Company Announcement</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">Platform</th>
+<th align="center">Data Type</th>
+<th align="center">Related Market</th>
+<th align="center">Data Source</th>
+<th align="center">Specified Company</th>
+<th align="center">Range Type</th>
+<th align="center">Source Type</th>
+<th align="center">Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="http://www.cninfo.com.cn/new/index">Juchao (Official Website)</a></td>
+<td align="center">Text</td>
+<td align="center">CN Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/company_announcement/juchao.py">Juchao Annoumcement Downloader</a></td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.sec.gov/">SEC (Official Website)</a></td>
+<td align="center">Text</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="">SEC Annoumcement</a></td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml">Sina</a></td>
+<td align="center">Text</td>
+<td align="center">CN Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/company_announcement/sina.py">Sina Annoumcement Downloader</a></td>
+<td align="center">√</td>
+<td align="center">Lastest</td>
+<td align="center">Third Party</td>
+<td align="center">N/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-trends">4. Trends</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Platform</th>
+<th align="center">Data Type</th>
+<th align="center">Related Market</th>
+<th align="center">Data Source</th>
+<th align="center">Specified Company</th>
+<th align="center">Range Type</th>
+<th align="center">Source Type</th>
+<th align="center">Limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://trends.google.com/trends/explore">Google Trends</a></td>
+<td align="center">Index</td>
+<td align="center">US Stocks</td>
+<td align="center"><a href="./finnlp/data_sources/trends/google.py">Google Trends</a></td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://index.baidu.com/v2/index.html#/">Baidu Index</a></td>
+<td align="center">Index</td>
+<td align="center">CN Stocks</td>
+<td align="center">Soon</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-data-sets">5. Data Sets</h3>
+<table>
+<thead>
+<tr>
+<th align="center">Data Source</th>
+<th align="center">Type</th>
+<th align="center">Stocks</th>
+<th align="center">Dates</th>
+<th align="center">Avaliable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://github.com/JinanZou/Astock">AShare</a></td>
+<td align="center">News</td>
+<td align="center">3680</td>
+<td align="center">2018-07-01 to 2021-11-30</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/yumoxu/stocknet-dataset">stocknet-dataset</a></td>
+<td align="center">Tweets</td>
+<td align="center">87</td>
+<td align="center">2014-01-02 to 2015-12-30</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/wuhuizhe/CHRNN">CHRNN</a></td>
+<td align="center">Tweets</td>
+<td align="center">38</td>
+<td align="center">2017-01-03 to 2017-12-28</td>
+<td align="center">√</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-large-language-models-llms">Related Large Language Models (LLMs)</h2>
+<ul>
+<li><a href="https://openai.com/blog/chatgpt">ChatGPT (GPT 3.5)</a></li>
+<li><a href="https://openai.com/research/gpt-4">GPT 4.0</a></li>
+<li><a href="https://github.com/THUDM/ChatGLM-6B">ChatGLM</a></li>
+<li><a href="https://developers.googleblog.com/2023/03/announcing-palm-api-and-makersuite.html">PaLM</a></li>
+<li><a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai/">LLaMA</a></li>
+<li><a href="https://github.com/yya518/FinBERT">FinBERT</a></li>
+<li><a href="https://huggingface.co/">Hugging Face</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

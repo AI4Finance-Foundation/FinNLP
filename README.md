@@ -292,47 +292,44 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
   ```
 
 
-## Ⅱ. Supported Data Sources
+## Ⅱ. Data Sources
 
 ### 1. News
 
-|                           Platform                           | Data Type  | Related Market |                         Data Source                          | Specified Company | Range  Type  |      Source Type      |                  Limits                   |
-| :----------------------------------------------------------: | :--------: | :------------: | :----------------------------------------------------------: | :---------------: | ---------- | :-------------------: | :---------------------------------------: |
-|              [Yahoo]((https://news.yahoo.com/))              |  Financial News   |   US Stocks    |    [Finnhub News](./finnlp/data_sources/news/finnhub.py)     |         √         | Date Range | Third party |         Account-specific （Free）         |
-| [Sina](https://news.sina.com.cn/roll/#pageid=153&lid=2516&k=&num=50&page=1) |   Financial News    |   CN Stocks    |  [Sina Finance](./finnlp/data_sources/news/sina_finance.py)  |         ×         | Date Range |   Official     |               N/A             |
-|             [CCTV](http://tv.cctv.com/lm/xwlb/)              | Governemnt News |   CN Stocks    |  [Akshare cctv](./finnlp/data_sources/news/akshare_cctv.py)  |         ×         | Date Range | Third party|                    N/A                    |
-|                   US Mainstream Media                   |   Financial News    |   US Stocks    |    [Finnhub News](./finnlp/data_sources/news/finnhub.py)     |         √         | Date Range |       Third party       |         Account-specific （Free）         |
-|                   CN Mainstream Media                   |   Financial News    |   CN Stocks    | [Tushare Major News](./finnlp/data_sources/news/tushare_major_news.py) |         ×         | Date Range |       Third party       | Account-specific（About ￥500 per year ） |
-
-
+|      Platform       |    Data Type    | Related Market | Specified Company | Range  Type | Source Type |        Limits        | Support |
+| :----------------------------------------------------------: | :--------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :-------------------: | ------------------------------------------------------------ |
+|        Yahoo        | Financial News  |   US Stocks    |         √         | Date Range  |  Official   |         N/A          |    √    |
+| Wall street Journal | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
+|      Bloomberg      | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
+|       Reuters       | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
+|        Sina         | Financial News  |   CN Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
+|      Eastmoney      | Financial News  |   CN Stocks    |         √         | Date Range  |  Official   |         N/A          |    √    |
+|        Yicai        | Financial News  |   CN Stocks    |         √         | Date Range  |  Official   |         N/A          |  Soon   |
+|        CCTV         | Governemnt News |   CN Stocks    |         ×         | Date Range  | Third party |         N/A          |    √    |
+| US Mainstream Media | Financial News  |   US Stocks    |         √         | Date Range  | Third party |    Account (Free)    |    √    |
+| CN Mainstream Media | Financial News  |   CN Stocks    |         ×         | Date Range  | Third party | Account (￥500/year) |    √    |
 
 ### 2. Social Media
 
-|                           Platform                           | Data Type | Related Market |                         Data Source                          | Specified Company |     Range Type     | Source Type | Limits |
-| :----------------------------------------------------------: | :-------: | :------------: | :----------------------------------------------------------: | :---------------: | :----------------: | :---------: | :----: |
-|              [Twitter](https://www.twitter.com)              |  Tweets   |   US Stocks    | [Twitter Downloader](./finnlp/data_sources/social_media/twitter.py) |         √         |     Date Range     |  Official   |  N/A   |
-|              [Twitter](https://www.twitter.com)              | Sentiment |   US Stocks    | [Finnhub Sentiment](./finnlp/data_sources/social_media/finnhub.py) |         √         |     Date Range     | Third Party |  N/A   |
-|            [StockTwits](https://stocktwits.com/)             |  Tweets   |   US Stocks    | [Stocktwits Downloader](./finnlp/data_sources/social_media/stocktwits.py) |         √         |      Lastest       |  Official   |  N/A   |
-| [Reddit (wallstreetbets)](https://www.reddit.com/r/wallstreetbets/new/) |  Threads  |   US Stocks    | [Reddit Downloader](./finnlp/data_sources/social_media/reddit.py) |         ×         |      Lastest       |  Official   |  N/A   |
-|              [Reddit](https://www.reddit.com/)               | Sentiment |   US Stocks    | [Finnhub Sentiment](./finnlp/data_sources/social_media/finnhub.py) |         √         |     Date Range     | Third Party |  N/A   |
-|                  [Weibo](https://weibo.com)                  |  Tweets   |   CN Stocks    |           [Weibo Date Range]()/[Weibo Streaming]()           |         √         | Date Range/Lastest |  Official   |  N/A   |
+|        Platform         | Data Type | Related Market | Specified Company | Range Type | Source Type | Limits  | Support |
+| :---------------------: | :-------: | :------------: | :---------------: | :--------: | :---------: | :-----: | :-----: |
+|         Twitter         |  Tweets   |   US Stocks    |         √         | Date Range |  Official   |   N/A   |    √    |
+|         Twitter         | Sentiment |   US Stocks    |         √         | Date Range | Third Party |   N/A   |    √    |
+|       StockTwits        |  Tweets   |   US Stocks    |         √         |  Lastest   |  Official   |   N/A   |    √    |
+| Reddit (wallstreetbets) |  Threads  |   US Stocks    |         ×         |  Lastest   |  Official   |   N/A   |    √    |
+|         Reddit          | Sentiment |   US Stocks    |         √         | Date Range | Third Party |   N/A   |    √    |
+|          Weibo          |  Tweets   |   CN Stocks    |         √         | Date Range |  Official   | Cookies |    √    |
+|          Weibo          |  Tweets   |   CN Stocks    |         √         |  Lastest   |  Official   |   N/A   |    √    |
 
 ### 3. Company Announcement
-|                           Platform                           | Data Type | Related Market |                         Data Source                          | Specified Company | Range Type | Source Type | Limits |
-| :----------------------------------------------------------: | :-------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :---------: | :----: |
-| [Juchao (Official Website)](http://www.cninfo.com.cn/new/index) |   Text    |   CN Stocks    | [Juchao Annoumcement Downloader](./finnlp/data_sources/company_announcement/juchao.py) |         √         | Date Range |  Official   |  N/A   |
-|        [SEC (Official Website)](https://www.sec.gov/)        |   Text    |   US Stocks    |                     [SEC Annoumcement]()                     |         √         | Date Range |  Official   |  N/A   |
-| [Sina](https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml) |   Text    |   CN Stocks    | [Sina Annoumcement Downloader](./finnlp/data_sources/company_announcement/sina.py) |         √         |  Lastest   | Third Party |  N/A   |
-
-### 4. Trends
-
-|                         Platform                          | Data Type | Related Market |                       Data Source                       | Specified Company | Range Type | Source Type | Limits |
-| :-------------------------------------------------------: | :-------: | :------------: | :-----------------------------------------------------: | :---------------: | :--------: | :---------: | :----: |
-| [Google Trends](https://trends.google.com/trends/explore) |   Index   |   US Stocks    | [Google Trends](./finnlp/data_sources/trends/google.py) |         √         | Date Range |  Official   |  N/A   |
-|  [Baidu Index](https://index.baidu.com/v2/index.html#/)   |   Index   |   CN Stocks    |                          Soon                           |         -         |     -      |      -      |   -    |
+|         Platform          | Data Type | Related Market | Specified Company | Range Type | Source Type | Limits | Support |
+| :-----------------------: | :-------: | :------------: | :---------------: | :--------: | :---------: | :----: | :-----: |
+| Juchao (Official Website) |   Text    |   CN Stocks    |         √         | Date Range |  Official   |  N/A   |    √    |
+|  SEC (Official Website)   |   Text    |   US Stocks    |         √         | Date Range |  Official   |  N/A   |    √    |
+|           Sina            |   Text    |   CN Stocks    |         √         |  Lastest   | Third Party |  N/A   |    √    |
 
 
-### 5. Data Sets
+### 4. Data Sets
   |   Data Source    | Type | Stocks | Dates | Avaliable |
   | :--------------: | :----: | :----: | :-------: | :--------------: |
   | [AShare](https://github.com/JinanZou/Astock)  | News |   3680   |   2018-07-01 to 2021-11-30   |  √  |
