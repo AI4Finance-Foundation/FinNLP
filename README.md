@@ -336,7 +336,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
   | [stocknet-dataset](https://github.com/yumoxu/stocknet-dataset) | Tweets |   87   |   2014-01-02 to 2015-12-30   |  √  |
   | [CHRNN](https://github.com/wuhuizhe/CHRNN) | Tweets | 38 | 2017-01-03 to 2017-12-28 | √ |
 
-## Ⅲ. Related Large Language Models (LLMs)
+## Ⅲ. Large Language Models (LLMs)
 * [ChatGPT (GPT 3.5)](https://openai.com/blog/chatgpt)
 * [GPT 4.0](https://openai.com/research/gpt-4)
 * [ChatGLM](https://github.com/THUDM/ChatGLM-6B)
