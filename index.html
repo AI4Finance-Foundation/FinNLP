@@ -215,11 +215,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-data-sources" class="md-nav__link">
-    Supported Data Sources
+  <a href="#i-architecture" class="md-nav__link">
+    Ⅰ. Architecture
   </a>
   
-    <nav class="md-nav" aria-label="Supported Data Sources">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-data-sources" class="md-nav__link">
+    Ⅱ. Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Ⅱ. Data Sources">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -257,15 +264,50 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#1-fine-tuning-tensor-layers-lora" class="md-nav__link">
+    1. Fine-tuning: Tensor Layers (LoRA)
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#related-large-language-models-llms" class="md-nav__link">
-    Related Large Language Models (LLMs)
+        
+          <li class="md-nav__item">
+  <a href="#2-fine-tuning-reinforcement-learning-on-stock-prices-rlsp" class="md-nav__link">
+    2. Fine-tuning: Reinforcement Learning on Stock Prices (RLSP)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv-applications" class="md-nav__link">
+    Ⅳ. Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-robo-advisor" class="md-nav__link">
+    1. Robo Advisor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quantitative-trading" class="md-nav__link">
+    2. Quantitative Trading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-low-code-development" class="md-nav__link">
+    3. Low-code development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -349,11 +391,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#supported-data-sources" class="md-nav__link">
-    Supported Data Sources
+  <a href="#i-architecture" class="md-nav__link">
+    Ⅰ. Architecture
   </a>
   
-    <nav class="md-nav" aria-label="Supported Data Sources">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-data-sources" class="md-nav__link">
+    Ⅱ. Data Sources
+  </a>
+  
+    <nav class="md-nav" aria-label="Ⅱ. Data Sources">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -391,15 +440,50 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#1-fine-tuning-tensor-layers-lora" class="md-nav__link">
+    1. Fine-tuning: Tensor Layers (LoRA)
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#related-large-language-models-llms" class="md-nav__link">
-    Related Large Language Models (LLMs)
+        
+          <li class="md-nav__item">
+  <a href="#2-fine-tuning-reinforcement-learning-on-stock-prices-rlsp" class="md-nav__link">
+    2. Fine-tuning: Reinforcement Learning on Stock Prices (RLSP)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iv-applications" class="md-nav__link">
+    Ⅳ. Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-robo-advisor" class="md-nav__link">
+    1. Robo Advisor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-quantitative-trading" class="md-nav__link">
+    2. Quantitative Trading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-low-code-development" class="md-nav__link">
+    3. Low-code development
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -421,195 +505,226 @@
 <h1 id="internet-scale-financial-data">Internet-scale Financial Data</h1>
 <p>The demos are shown in <a href="https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech">FinGPT</a></p>
 <p><strong>Disclaimer: We are sharing codes for academic purpose under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money. Please use common sense and always first consult a professional before trading or investing.</strong></p>
-<h2 id="supported-data-sources">Supported Data Sources</h2>
-<h3 id="1-news">1. <a href="" title="jupyter/Data_Sources_News/">News</a></h3>
+<h2 id="i-architecture">Ⅰ. Architecture</h2>
+<p><img alt="image-20230505200244043" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052002139.png" /></p>
+<h2 id="ii-data-sources">Ⅱ. Data Sources</h2>
+<p><img alt="image-20230505200446477" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052004539.png" /></p>
+<h3 id="1-news">1. <a href="jupyter/Data_Sources_News/">News</a></h3>
 <table>
 <thead>
 <tr>
 <th align="center">Platform</th>
 <th align="center">Data Type</th>
 <th align="center">Related Market</th>
-<th align="center">Data Source</th>
 <th align="center">Specified Company</th>
-<th>Range  Type</th>
+<th align="center">Range Type</th>
 <th align="center">Source Type</th>
 <th align="center">Limits</th>
+<th>Docs (1e4)</th>
+<th>Support</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="(https://news.yahoo.com/)">Yahoo</a></td>
+<td align="center">Yahoo</td>
 <td align="center">Financial News</td>
 <td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/news/finnhub.py">Finnhub News</a></td>
 <td align="center">√</td>
-<td>Date Range</td>
-<td align="center">Third party</td>
-<td align="center">Account-specific （Free）</td>
-</tr>
-<tr>
-<td align="center"><a href="https://news.sina.com.cn/roll/#pageid=153&amp;lid=2516&amp;k=&amp;num=50&amp;page=1">Sina</a></td>
-<td align="center">Financial News</td>
-<td align="center">CN Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/news/sina_finance.py">Sina Finance</a></td>
-<td align="center">×</td>
-<td>Date Range</td>
+<td align="center">Date Range</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
+<td>1,500+</td>
+<td>√</td>
 </tr>
 <tr>
-<td align="center"><a href="http://tv.cctv.com/lm/xwlb/">CCTV</a></td>
+<td align="center">Reuters</td>
+<td align="center">Financial News</td>
+<td align="center">US Stocks</td>
+<td align="center">×</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+<td>1,500+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">Sina</td>
+<td align="center">Financial News</td>
+<td align="center">CN Stocks</td>
+<td align="center">×</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+<td>2,000+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">Eastmoney</td>
+<td align="center">Financial News</td>
+<td align="center">CN Stocks</td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+<td>1,000+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">Yicai</td>
+<td align="center">Financial News</td>
+<td align="center">CN Stocks</td>
+<td align="center">√</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">N/A</td>
+<td>500+</td>
+<td>Soon</td>
+</tr>
+<tr>
+<td align="center">CCTV</td>
 <td align="center">Governemnt News</td>
 <td align="center">CN Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/news/akshare_cctv.py">Akshare cctv</a></td>
 <td align="center">×</td>
-<td>Date Range</td>
+<td align="center">Date Range</td>
 <td align="center">Third party</td>
 <td align="center">N/A</td>
+<td>4</td>
+<td>√</td>
 </tr>
 <tr>
-<td align="center">US Mainstream Media</td>
+<td align="center">US Mainstream</td>
 <td align="center">Financial News</td>
 <td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/news/finnhub.py">Finnhub News</a></td>
 <td align="center">√</td>
-<td>Date Range</td>
+<td align="center">Date Range</td>
 <td align="center">Third party</td>
-<td align="center">Account-specific （Free）</td>
+<td align="center">Account (Free)</td>
+<td>3,200+</td>
+<td>√</td>
 </tr>
 <tr>
-<td align="center">CN Mainstream Media</td>
+<td align="center">CN Mainstream</td>
 <td align="center">Financial News</td>
 <td align="center">CN Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/news/tushare_major_news.py">Tushare Major News</a></td>
 <td align="center">×</td>
-<td>Date Range</td>
+<td align="center">Date Range</td>
 <td align="center">Third party</td>
-<td align="center">Account-specific（About ￥500 per year ）</td>
+<td align="center">￥500/year</td>
+<td>3000+</td>
+<td>√</td>
 </tr>
 </tbody>
 </table>
-<h3 id="2-social-media">2. <a href="">Social Media</a></h3>
+<h3 id="2-social-media">2. <a href="jupyter/Data_sources_Social_Media.iypnb">Social Media</a></h3>
 <table>
 <thead>
 <tr>
 <th align="center">Platform</th>
 <th align="center">Data Type</th>
 <th align="center">Related Market</th>
-<th align="center">Data Source</th>
 <th align="center">Specified Company</th>
 <th align="center">Range Type</th>
 <th align="center">Source Type</th>
 <th align="center">Limits</th>
+<th>Docs (1e4)</th>
+<th align="center">Support</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="https://www.twitter.com">Twitter</a></td>
+<td align="center">Twitter</td>
 <td align="center">Tweets</td>
 <td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/social_media/twitter.py">Twitter Downloader</a></td>
 <td align="center">√</td>
 <td align="center">Date Range</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.twitter.com">Twitter</a></td>
-<td align="center">Sentiment</td>
-<td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/social_media/finnhub.py">Finnhub Sentiment</a></td>
+<td>18,000+</td>
 <td align="center">√</td>
-<td align="center">Date Range</td>
-<td align="center">Third Party</td>
-<td align="center">N/A</td>
 </tr>
 <tr>
-<td align="center"><a href="https://stocktwits.com/">StockTwits</a></td>
+<td align="center">StockTwits</td>
 <td align="center">Tweets</td>
 <td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/social_media/stocktwits.py">Stocktwits Downloader</a></td>
 <td align="center">√</td>
 <td align="center">Lastest</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
+<td>160,000+</td>
+<td align="center">√</td>
 </tr>
 <tr>
-<td align="center"><a href="https://www.reddit.com/r/wallstreetbets/new/">Reddit (wallstreetbets)</a></td>
+<td align="center">Reddit (wallstreetbets)</td>
 <td align="center">Threads</td>
 <td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/social_media/reddit.py">Reddit Downloader</a></td>
 <td align="center">×</td>
 <td align="center">Lastest</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.reddit.com/">Reddit</a></td>
-<td align="center">Sentiment</td>
-<td align="center">US Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/social_media/finnhub.py">Finnhub Sentiment</a></td>
+<td>9+</td>
 <td align="center">√</td>
-<td align="center">Date Range</td>
-<td align="center">Third Party</td>
-<td align="center">N/A</td>
 </tr>
 <tr>
-<td align="center"><a href="https://weibo.com">Weibo</a></td>
+<td align="center">Weibo</td>
 <td align="center">Tweets</td>
 <td align="center">CN Stocks</td>
-<td align="center"><a href="">Weibo Date Range</a>/<a href="">Weibo Streaming</a></td>
 <td align="center">√</td>
-<td align="center">Date Range/Lastest</td>
+<td align="center">Date Range</td>
+<td align="center">Official</td>
+<td align="center">Cookies</td>
+<td>1,400,000+</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">Weibo</td>
+<td align="center">Tweets</td>
+<td align="center">CN Stocks</td>
+<td align="center">√</td>
+<td align="center">Lastest</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
+<td>1,400,000+</td>
+<td align="center">√</td>
 </tr>
 </tbody>
 </table>
-<h3 id="3-company-announcement">3. <a href="">Company Announcement</a></h3>
+<h3 id="3-company-announcement">3. <a href="jupyter/Data_Srouces_Company_Announcement.ipynb">Company Announcement</a></h3>
 <table>
 <thead>
 <tr>
 <th align="center">Platform</th>
 <th align="center">Data Type</th>
 <th align="center">Related Market</th>
-<th align="center">Data Source</th>
 <th align="center">Specified Company</th>
 <th align="center">Range Type</th>
 <th align="center">Source Type</th>
 <th align="center">Limits</th>
+<th>Docs (1e4)</th>
+<th align="center">Support</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><a href="http://www.cninfo.com.cn/new/index">Juchao (Official Website)</a></td>
+<td align="center">Juchao (Official Website)</td>
 <td align="center">Text</td>
 <td align="center">CN Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/company_announcement/juchao.py">Juchao Annoumcement Downloader</a></td>
 <td align="center">√</td>
 <td align="center">Date Range</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
+<td>2,790+</td>
+<td align="center">√</td>
 </tr>
 <tr>
-<td align="center"><a href="https://www.sec.gov/">SEC (Official Website)</a></td>
+<td align="center">SEC (Official Website)</td>
 <td align="center">Text</td>
 <td align="center">US Stocks</td>
-<td align="center"><a href="">SEC Annoumcement</a></td>
 <td align="center">√</td>
 <td align="center">Date Range</td>
 <td align="center">Official</td>
 <td align="center">N/A</td>
-</tr>
-<tr>
-<td align="center"><a href="https://vip.stock.finance.sina.com.cn/corp/go.php/vCB_AllBulletin/stockid/600519.phtml">Sina</a></td>
-<td align="center">Text</td>
-<td align="center">CN Stocks</td>
-<td align="center"><a href="./finnlp/data_sources/company_announcement/sina.py">Sina Annoumcement Downloader</a></td>
+<td>1,440+</td>
 <td align="center">√</td>
-<td align="center">Lastest</td>
-<td align="center">Third Party</td>
-<td align="center">N/A</td>
 </tr>
 </tbody>
 </table>
@@ -685,16 +800,19 @@
 </tr>
 </tbody>
 </table>
-<h2 id="related-large-language-models-llms">Related Large Language Models (LLMs)</h2>
-<ul>
-<li><a href="https://openai.com/blog/chatgpt">ChatGPT (GPT 3.5)</a></li>
-<li><a href="https://openai.com/research/gpt-4">GPT 4.0</a></li>
-<li><a href="https://github.com/THUDM/ChatGLM-6B">ChatGLM</a></li>
-<li><a href="https://developers.googleblog.com/2023/03/announcing-palm-api-and-makersuite.html">PaLM</a></li>
-<li><a href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai/">LLaMA</a></li>
-<li><a href="https://github.com/yya518/FinBERT">FinBERT</a></li>
-<li><a href="https://huggingface.co/">Hugging Face</a></li>
-</ul>
+<p>## Ⅲ. Models</p>
+<p><img alt="image-20230505200618504" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052006541.png" /></p>
+<h3 id="1-fine-tuning-tensor-layers-lora">1. Fine-tuning: Tensor Layers (LoRA)</h3>
+<p><img alt="image-20230505200944411" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052009480.png" /></p>
+<h3 id="2-fine-tuning-reinforcement-learning-on-stock-prices-rlsp">2. Fine-tuning: Reinforcement Learning on Stock Prices (RLSP)</h3>
+<p><img alt="image-20230505201209946" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052012996.png" /></p>
+<h3 id="iv-applications">Ⅳ. Applications</h3>
+<h3 id="1-robo-advisor">1. Robo Advisor</h3>
+<p><img alt="image-20230505201913233" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052019296.png" /></p>
+<h3 id="2-quantitative-trading">2. Quantitative Trading</h3>
+<p><img alt="image-20230505201841001" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052018035.png" /></p>
+<h3 id="3-low-code-development">3. Low-code development</h3>
+<p><img alt="image-20230505202028292" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052020363.png" /></p>
 
 
 
