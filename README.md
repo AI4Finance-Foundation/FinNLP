@@ -2,6 +2,8 @@
 
 The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
 
+[FinNLP Website](Or you may refer to the [wiki](https://ai4finance-foundation.github.io/FinNLP/) 
+
 **Disclaimer: We are sharing codes for academic purpose under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money. Please use common sense and always first consult a professional before trading or investing.**
 
 ## Ⅰ. How to Use
