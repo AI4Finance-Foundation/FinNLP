@@ -1,0 +1,806 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Oliver Wang, Xiao-yang Liu">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+    
+    
+      
+        <title>互联网金融数据 - FinNLP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FinNLP" class="md-header__button md-logo" aria-label="FinNLP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FinNLP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              互联网金融数据
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    中文
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FinNLP" class="md-nav__button md-logo" aria-label="FinNLP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    FinNLP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/Data_Sources_News/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/Data_Sources_Social_Media/" class="md-nav__link">
+        Social Media
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/Data_Sources_Company_Announcement/" class="md-nav__link">
+        Company Announcement
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i" class="md-nav__link">
+    Ⅰ. 架构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii" class="md-nav__link">
+    Ⅱ. 数据源
+  </a>
+  
+    <nav class="md-nav" aria-label="Ⅱ. 数据源">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 新闻
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 社交媒体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 公司公告
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 趋势
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 数据集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii" class="md-nav__link">
+    Ⅲ. 模型
+  </a>
+  
+    <nav class="md-nav" aria-label="Ⅲ. 模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tensor-layers-lora" class="md-nav__link">
+    1. 微调：Tensor Layers (LoRA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rlsp" class="md-nav__link">
+    2. 微调：强化学习在股价上的应用 (RLSP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv" class="md-nav__link">
+    Ⅳ. 应用
+  </a>
+  
+    <nav class="md-nav" aria-label="Ⅳ. 应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1. 智能投顾
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2. 量化交易
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    3. 低代码开发
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">互联网金融数据</h1>
+<p>演示内容请参见<a href="https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech">FinGPT</a></p>
+<p><strong>免责声明：我们根据MIT教育许可证的规定共享代码以供学术研究之用。此处不构成任何金融建议，亦非交易真实资金的推荐。在交易或投资之前请使用常识并首先咨询专业人士。</strong></p>
+<h2 id="i">Ⅰ. 架构</h2>
+<p><img alt="image-20230505200244043" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052002139.png" /></p>
+<ul>
+<li>
+<p>整个项目由4个部分组成：</p>
+</li>
+<li>
+<p>第一部分是<strong>数据源</strong>，在这里，我们从互联网上收集历史和流媒体数据。</p>
+</li>
+<li>
+<p>接下来，我们将数据推送到<strong>数据工程</strong>部分，在这里我们会对数据进行清洗，标记化处理和提示工程。</p>
+</li>
+<li>
+<p>然后，数据被推送到<strong>大语言模型（LLMs）</strong>。在这里，我们可以以不同的方式使用LLMs。我们不仅可以使用收集到的数据来训练我们自己的<strong>轻量级微调模型</strong>，还可以使用这些数据和<strong>训练好的模型</strong>或<strong>LLM API</strong>来支持我们的应用程序。</p>
+</li>
+<li>
+<p>最后一部分将是<strong>应用程序</strong>部分，我们可以使用数据和LLMs来制作许多有趣的应用程序。</p>
+</li>
+</ul>
+<h2 id="ii">Ⅱ. 数据源</h2>
+<p><img alt="image-20230505200446477" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052004539.png" /></p>
+<ul>
+<li>由于空间限制，我们只展示了其中一部分。</li>
+</ul>
+<h3 id="1">1. <a href="jupyter/Data_Sources_News.ipynb">新闻</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">平台</th>
+<th align="center">数据类型</th>
+<th align="center">相关市场</th>
+<th align="center">指定公司</th>
+<th align="center">时间范围</th>
+<th align="center">数据源类型</th>
+<th align="center">限制条件</th>
+<th>文档数量(万)</th>
+<th>支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">雅虎</td>
+<td align="center">金融新闻</td>
+<td align="center">美国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>1,500+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">路透社</td>
+<td align="center">金融新闻</td>
+<td align="center">美国股票</td>
+<td align="center">×</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>1,500+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">新浪</td>
+<td align="center">金融新闻</td>
+<td align="center">中国股票</td>
+<td align="center">×</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>2,000+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">东方财富</td>
+<td align="center">金融新闻</td>
+<td align="center">中国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>1,000+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">第一财经</td>
+<td align="center">金融新闻</td>
+<td align="center">中国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>500+</td>
+<td>即将</td>
+</tr>
+<tr>
+<td align="center">央视</td>
+<td align="center">政府新闻</td>
+<td align="center">中国股票</td>
+<td align="center">×</td>
+<td align="center">时间范围</td>
+<td align="center">第三方</td>
+<td align="center">N/A</td>
+<td>4</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">美国主流媒体</td>
+<td align="center">金融新闻</td>
+<td align="center">美国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">第三方</td>
+<td align="center">账户 (免费)</td>
+<td>3,200+</td>
+<td>√</td>
+</tr>
+<tr>
+<td align="center">中国主流媒体</td>
+<td align="center">金融新闻</td>
+<td align="center">中国股票</td>
+<td align="center">×</td>
+<td align="center">时间范围</td>
+<td align="center">第三方</td>
+<td align="center">￥500/年</td>
+<td>3000+</td>
+<td>√</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>FinGPT可能比Bloomberg的文档数目更少，但我们在同一个数量级上。</li>
+</ul>
+<h3 id="2">2. <a href="jupyter/Data_Sources_Social_Media.iypnb">社交媒体</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">平台</th>
+<th align="center">数据类型</th>
+<th align="center">相关市场</th>
+<th align="center">指定公司</th>
+<th align="center">范围类型</th>
+<th align="center">来源类型</th>
+<th align="center">限制</th>
+<th>文档 (1e4)</th>
+<th align="center">支持</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Twitter</td>
+<td align="center">推文</td>
+<td align="center">美国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>18,000+</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">StockTwits</td>
+<td align="center">推文</td>
+<td align="center">美国股票</td>
+<td align="center">√</td>
+<td align="center">最新</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>160,000+</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">Reddit (wallstreetbets)</td>
+<td align="center">帖子</td>
+<td align="center">美国股票</td>
+<td align="center">×</td>
+<td align="center">最新</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>9+</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">微博</td>
+<td align="center">推文</td>
+<td align="center">中国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">Cookies</td>
+<td>1,400,000+</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">微博</td>
+<td align="center">推文</td>
+<td align="center">中国股票</td>
+<td align="center">√</td>
+<td align="center">最新</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>1,400,000+</td>
+<td align="center">√</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>在 <strong>BloomberGPT</strong> 中，他们<strong>不收集社交媒体数据</strong>，但我们认为<strong>公众舆论是干扰股票市场的最重要因素之一</strong>。</li>
+</ul>
+<h3 id="3">3. <a href="jupyter/Data_Sources_Company_Announcement.ipynb">公司公告</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">平台</th>
+<th align="center">数据类型</th>
+<th align="center">相关市场</th>
+<th align="center">指定公司</th>
+<th align="center">范围类型</th>
+<th align="center">数据来源</th>
+<th align="center">限制</th>
+<th>文档数 (1e4)</th>
+<th align="center">支持情况</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">巨潮网 (官方)</td>
+<td align="center">文本</td>
+<td align="center">中国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>2,790+</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">美国证监会 (官方)</td>
+<td align="center">文本</td>
+<td align="center">美国股票</td>
+<td align="center">√</td>
+<td align="center">时间范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+<td>1,440+</td>
+<td align="center">√</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>由于我们从不同的股票市场收集数据，因此我们比Bloomberg GPT有更多的申报文档。</li>
+</ul>
+<h3 id="4">4. 趋势</h3>
+<table>
+<thead>
+<tr>
+<th align="center">平台</th>
+<th align="center">数据类型</th>
+<th align="center">相关市场</th>
+<th align="center">数据源</th>
+<th align="center">指定公司</th>
+<th align="center">范围类型</th>
+<th align="center">源类型</th>
+<th align="center">限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://trends.google.com/trends/explore">谷歌趋势</a></td>
+<td align="center">指数</td>
+<td align="center">美国股票</td>
+<td align="center"><a href="./finnlp/data_sources/trends/google.py">Google Trends</a></td>
+<td align="center">√</td>
+<td align="center">日期范围</td>
+<td align="center">官方</td>
+<td align="center">N/A</td>
+</tr>
+<tr>
+<td align="center"><a href="https://index.baidu.com/v2/index.html#/">百度指数</a></td>
+<td align="center">指数</td>
+<td align="center">中国股票</td>
+<td align="center">即将推出</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5">5. 数据集</h3>
+<table>
+<thead>
+<tr>
+<th align="center">数据源</th>
+<th align="center">类型</th>
+<th align="center">股票</th>
+<th align="center">日期</th>
+<th align="center">可用性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://github.com/JinanZou/Astock">AShare</a></td>
+<td align="center">新闻</td>
+<td align="center">3680</td>
+<td align="center">2018-07-01 到 2021-11-30</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/yumoxu/stocknet-dataset">stocknet-dataset</a></td>
+<td align="center">推文</td>
+<td align="center">87</td>
+<td align="center">2014-01-02 到 2015-12-30</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/wuhuizhe/CHRNN">CHRNN</a></td>
+<td align="center">推文</td>
+<td align="center">38</td>
+<td align="center">2017-01-03 到 2017-12-28</td>
+<td align="center">√</td>
+</tr>
+</tbody>
+</table>
+<h2 id="iii">Ⅲ. 模型</h2>
+<p><img alt="image-20230505200618504" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052006541.png" /></p>
+<ul>
+<li>在数据中心的自然语言处理领域，我们不需要从头开始训练模型。我们只需要调用API和进行轻量级的微调。</li>
+<li>左边是一些可能会用到的LLM APIs，中间是我们可能用来进行微调的模型，右边是一些微调方法。</li>
+</ul>
+<h3 id="1-tensor-layers-lora">1. 微调：Tensor Layers (LoRA)</h3>
+<p><img alt="image-20230505200944411" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052009480.png" /></p>
+<ul>
+<li>在FinGPT中，我们使用新的金融数据集对预训练的LLM进行微调。高质量的标记数据是许多成功的LLM（包括ChatGPT）的最重要的关键之一。</li>
+<li>然而，这些高质量的标记数据通常非常昂贵和耗时，并且我们可能需要金融专家的帮助。</li>
+<li>如果我们的目标是使用LLM分析与金融相关的文本数据并帮助量化交易，为什么不让市场为我们做标记呢？</li>
+<li>因此，在这里，我们使用每个新闻相关的股票价格变化百分比作为输出标签，我们使用阈值将标签分成三组（积极的，消极的和中立的），并使用它们和新闻情感的标签。</li>
+<li>相应地，在提示工程师部分，我们还要求模型选择其中一个正面的，负面的和中性的作为输出，以便我们充分利用预训练信息。</li>
+<li>通过使用LoRA，我们可以将可训练参数减少从6.17B到3.67M。</li>
+<li>如表格所示，与chatGLM相比，FinGPT可以在多个指标上实现大幅改善。然而，直接将我们的模型用于量化交易可能是不合适的。由于大多数新闻标题都是中性的，LLMs的大多数原始输出都是中性的，因此LLMs在积极和消极的标签上表现不佳，而这些标签可能对于量化交易是有用的。</li>
+<li>然而，在微调之后，我们已经见证了在预测积极和消极标签方面的巨大改进。</li>
+<li>这也是为什么该模型可以实现积极的交易结果的原因。</li>
+</ul>
+<h3 id="2-rlsp">2. 微调：强化学习在股价上的应用 (RLSP)</h3>
+<p><img alt="image-20230505201209946" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052012996.png" /></p>
+<ul>
+<li>同样地，我们可以使用股价上的强化学习（RLSP）来替换ChatGPT中使用的人类反馈上的强化学习。</li>
+</ul>
+<h2 id="iv">Ⅳ. 应用</h2>
+<h3 id="1_1">1. 智能投顾</h3>
+<p><img alt="image-20230505201913233" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052019296.png" /></p>
+<ul>
+<li><strong>ChatGPT可以像专业人士一样进行投资建议。</strong></li>
+<li>在这个例子中，苹果的<strong>股价上涨</strong>与ChatGPT分析新闻的<strong>预测相符</strong>。</li>
+</ul>
+<h3 id="2_1">2. 量化交易</h3>
+<p><img alt="image-20230505201841001" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052018035.png" /></p>
+<ul>
+<li>我们还可以使用新闻、社交媒体推文或者公司公告来<strong>构建情感因子</strong>，右侧的部分是由Twitter推文和ChatGPT信号产生的交易结果，数据来自于一个称为<a href="https://link.zhihu.com/?target=https%3A//github.com/yumoxu/stocknet-dataset">stocknet-dataset</a>的数据集。</li>
+<li>正如您从图片中所看到的，由ChatGPT生成的交易信号<strong>非常出色</strong>，我们甚至可以<strong>仅通过根据Twitter情感因子交易而获得良好的结果</strong>。</li>
+<li>因此，我们可以通过<strong>结合价格因素</strong>来获得更好的结果。</li>
+</ul>
+<h3 id="3_1">3. 低代码开发</h3>
+<p><img alt="image-20230505202028292" src="https://cdn.jsdelivr.net/gh/oliverwang15/imgbed@main/img/202305052020363.png" /></p>
+<ul>
+<li>我们可以使用LLMs的帮助来编写代码。</li>
+<li>右侧显示了我们如何<strong>快速高效地</strong>开发我们的因子和其他代码。</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>

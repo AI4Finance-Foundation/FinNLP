@@ -299,8 +299,6 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 |      Platform       |    Data Type    | Related Market | Specified Company | Range  Type | Source Type |        Limits        | Support |
 | :----------------------------------------------------------: | :--------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :-------------------: | ------------------------------------------------------------ |
 |        Yahoo        | Financial News  |   US Stocks    |         √         | Date Range  |  Official   |         N/A          |    √    |
-| Wall street Journal | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
-|      Bloomberg      | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
 |       Reuters       | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
 |        Sina         | Financial News  |   CN Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
 |      Eastmoney      | Financial News  |   CN Stocks    |         √         | Date Range  |  Official   |         N/A          |    √    |
