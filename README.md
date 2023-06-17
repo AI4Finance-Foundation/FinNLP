@@ -298,16 +298,17 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 
 ### 1. News
 
-|      Platform       |    Data Type    | Related Market | Specified Company | Range  Type | Source Type |        Limits        | Support |
-| :----------------------------------------------------------: | :--------: | :------------: | :----------------------------------------------------------: | :---------------: | :--------: | :-------------------: | ------------------------------------------------------------ |
-|        Yahoo        | Financial News  |   US Stocks    |         √         | Date Range  |  Official   |         N/A          |    √    |
-|       Reuters       | Financial News  |   US Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
-|        Sina         | Financial News  |   CN Stocks    |         ×         | Date Range  |  Official   |         N/A          |    √    |
-|      Eastmoney      | Financial News  |   CN Stocks    |         √         | Date Range  |  Official   |         N/A          |    √    |
-|        Yicai        | Financial News  |   CN Stocks    |         √         | Date Range  |  Official   |         N/A          |  Soon   |
-|        CCTV         | Governemnt News |   CN Stocks    |         ×         | Date Range  | Third party |         N/A          |    √    |
-| US Mainstream Media | Financial News  |   US Stocks    |         √         | Date Range  | Third party |    Account (Free)    |    √    |
-| CN Mainstream Media | Financial News  |   CN Stocks    |         ×         | Date Range  | Third party | Account (￥500/year) |    √    |
+|      Platform       |    Data Type    | Related Market | Specified Company | Range  Type |        Limits        | Support |
+| :----------------------------------------------------------: | :--------: | :------------: | :----------------------------------------------------------: | :---------------: | :-------------------: | ------------------------------------------------------------ |
+|        Yahoo        | Financial News  |   US Stocks    |         √         | Date Range  |         N/A          |    √    |
+|       Reuters       | General News |   US Stocks    |         ×         | Date Range  |         N/A          |    Soon    |
+| Seeking Alpha | Financial News | US Stocks | √ | Streaming | N/A | √ |
+|        Sina         | Financial News  |   CN Stocks    |         ×         | Date Range  |         N/A          |    √    |
+|      Eastmoney      | Financial News  |   CN Stocks    |         √         | Date Range  |         N/A          |    √    |
+|        Yicai        | Financial News  |   CN Stocks    |         √         | Date Range  |         N/A          |  Soon   |
+|        CCTV         | General News |   CN Stocks    |         ×         | Date Range  |         N/A          |    √    |
+| US Mainstream Media | Financial News  |   US Stocks    |         √         | Date Range  |    Account (Free)    |    √    |
+| CN Mainstream Media | Financial News  |   CN Stocks    |         ×         | Date Range  | Account (￥500/year) |    √    |
 
 ### 2. Social Media
 
