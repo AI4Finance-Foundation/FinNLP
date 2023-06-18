@@ -50,26 +50,20 @@ class Eastmoney_Streaming(News_Downloader):
         
         # gather the comtent of the first page
         page = etree.HTML(response.text)
-        divs = page.xpath('//*[@id="articlelistnew"]/div')
+        trs = page.xpath('//*[@id="mainlist"]/div/ul/li[1]/table/tbody/tr')
         have_one = False
-        for item in divs:
-            class_ = item.xpath("@class")[0]
-            # print(class_)
-            if "articleh" in class_:
-                have_one = True
-                read_amount = item.xpath("./span[1]//text()")[0]
-                comments = item.xpath("./span[2]//text()")[0]
-                title = item.xpath("./span[3]//text()")[0]
-                content_link = item.xpath("./span[3]/a/@href")[0]
-                author = item.xpath("./span[4]//text()")[0]
-                time = item.xpath("./span[5]//text()")[0]
-
-                tmp = pd.DataFrame([read_amount, comments, title, content_link, author, time]).T
-                columns = [ "read amount", "comments", "title", "content link", "author", "create time" ]
-                tmp.columns = columns
-                self.dataframe = pd.concat([self.dataframe, tmp])
-                # print(title)
-            elif class_ == "noarticle":
-                return "break"
+        for item in trs:
+            have_one = True
+            read_amount = item.xpath("./td[1]//text()")[0]
+            comments = item.xpath("./td[2]//text()")[0]
+            title = item.xpath("./td[3]/div/a//text()")[0]
+            content_link = item.xpath("./td[3]/div/a/@href")[0]
+            author = item.xpath("./td[4]//text()")[0]
+            time = item.xpath("./td[5]//text()")[0]
+            tmp = pd.DataFrame([read_amount, comments, title, content_link, author, time]).T
+            columns = [ "read amount", "comments", "title", "content link", "author", "create time" ]
+            tmp.columns = columns
+            self.dataframe = pd.concat([self.dataframe, tmp])
+            #print(title)
         if have_one == False:
             return "break"
