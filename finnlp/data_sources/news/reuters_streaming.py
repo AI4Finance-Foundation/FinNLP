@@ -6,6 +6,9 @@ import json
 import time
 from finnlp.data_sources.news._base import News_Downloader
 
+# TODO:
+# 1. Contents
+
 
 class Reuters_Streaming(News_Downloader):
 
