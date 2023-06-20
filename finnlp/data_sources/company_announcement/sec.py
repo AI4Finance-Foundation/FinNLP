@@ -7,7 +7,7 @@ import requests
 import json
 import time
 
-class SEC_Annoumcement(Company_Announcement_Downloader):
+class SEC_Announcement(Company_Announcement_Downloader):
 
     def __init__(self, args = {}):
         super().__init__(args)
