@@ -8,7 +8,7 @@ import pandas as pd
 from tqdm import tqdm
 from PyPDF2 import PdfReader
 
-class Juchao_Annoumcement(Company_Announcement_Downloader):
+class Juchao_Announcement(Company_Announcement_Downloader):
 
     def __init__(self, args = {}):
         super().__init__(args)

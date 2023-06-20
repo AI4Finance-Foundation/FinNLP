@@ -4,7 +4,7 @@ from lxml import etree
 from tqdm.notebook import tqdm
 import pandas as pd
 
-class Sina_Annoumcement_Downloader:
+class Sina_Announcement_Downloader:
 
     def __init__(self, args = {}):
         pass
@@ -48,7 +48,7 @@ class Sina_Annoumcement_Downloader:
             page += 1
         
         
-        with tqdm(total = df.shape[0],desc = "Getting annoumcement content" ) as pbar:
+        with tqdm(total = df.shape[0],desc = "Getting Announcement content" ) as pbar:
             df["content"] = df.apply(lambda x: self.get_content(x,pbar), axis=1 )
         
         df = df.reset_index(drop=True)

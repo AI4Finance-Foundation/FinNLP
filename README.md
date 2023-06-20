@@ -227,7 +227,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 
   ``` python
   # SEC
-  from finnlp.data_sources.company_announcement.sec import SEC_Annoumcement
+  from finnlp.data_sources.company_announcement.sec import SEC_Announcement
   
   start_date = "2020-01-01"
   end_date = "2020-06-01"
@@ -238,7 +238,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
       "proxy_pages": 3,
   }
   
-  downloader = SEC_Annoumcement(config)
+  downloader = SEC_Announcement(config)
   downloader.download_date_range_stock(start_date, end_date, stock = stock)
   selected_columns = ["file_date", "display_names", "content"]
   downloader.dataframe[selected_columns].head(10)
@@ -262,7 +262,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 
   ``` python
   # Juchao
-  from finnlp.data_sources.company_announcement.juchao import Juchao_Annoumcement
+  from finnlp.data_sources.company_announcement.juchao import Juchao_Announcement
   
   start_date = "2020-01-01"
   end_date = "2020-06-01"
@@ -273,7 +273,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
       "proxy_pages": 3,
   }
   
-  downloader = Juchao_Annoumcement(config)
+  downloader = Juchao_Announcement(config)
   downloader.download_date_range_stock(start_date, end_date, stock = stock, get_content = True, delate_pdf = True)
   selected_columns = ["announcementTime", "shortTitle","Content"]
   downloader.dataframe[selected_columns].head(10)
