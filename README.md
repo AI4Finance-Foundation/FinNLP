@@ -22,7 +22,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
       "use_proxy": "us_free",    # use proxies to prvent ip blocking
       "max_retry": 5,
       "proxy_pages": 5,
-      "token": "YOUR_FINNHUB_TOKEN"  # Avaliable at https://finnhub.io/dashboard
+      "token": "YOUR_FINNHUB_TOKEN"  # Available at https://finnhub.io/dashboard
   }
   
   news_downloader = Finnhub_Date_Range(config)                      # init
@@ -331,7 +331,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 
 
 ### 4. Data Sets
-  |   Data Source    | Type | Stocks | Dates | Avaliable |
+  |   Data Source    | Type | Stocks | Dates | Available |
   | :--------------: | :----: | :----: | :-------: | :--------------: |
   | [AShare](https://github.com/JinanZou/Astock)  | News |   3680   |   2018-07-01 to 2021-11-30   |  √  |
   | [stocknet-dataset](https://github.com/yumoxu/stocknet-dataset) | Tweets |   87   |   2014-01-02 to 2015-12-30   |  √  |
