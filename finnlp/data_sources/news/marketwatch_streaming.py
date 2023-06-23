@@ -25,7 +25,7 @@ class MarketWatch_Streaming(News_Downloader):
         # self._download_other_pages(keyword)
         print("Only support the first page now!")
 
-    def download_date_range_search(self, start_date , end_date, keyword = "apple", delay = 0.5):
+    def download_date_range_search(self, start_date , end_date, keyword = "apple", rounds = 1000, delay = 0.5):
         # download first page
         self._download_first_page(keyword, delay = delay, start_date = start_date, end_date = end_date)
        
