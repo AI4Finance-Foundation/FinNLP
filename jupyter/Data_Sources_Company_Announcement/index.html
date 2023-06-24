@@ -1428,9 +1428,9 @@ sys.path.append("../../FinNLP")</div>
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="kn">from</span> <span class="nn">finnlp.data_sources.company_announcement.sec</span> <span class="kn">import</span> <span class="n">SEC_Annoumcement</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="kn">from</span> <span class="nn">finnlp.data_sources.company_announcement.sec</span> <span class="kn">import</span> <span class="n">SEC_Announcement</span>
 </pre></div>
-<div id="cell-2" class="clipboard-copy-txt">from finnlp.data_sources.company_announcement.sec import SEC_Annoumcement</div>
+<div id="cell-2" class="clipboard-copy-txt">from finnlp.data_sources.company_announcement.sec import SEC_Announcement</div>
         
         </div>
     </div>
@@ -1507,10 +1507,10 @@ config = {
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">downloader</span> <span class="o">=</span> <span class="n">SEC_Annoumcement</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">downloader</span> <span class="o">=</span> <span class="n">SEC_Announcement</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 <span class="n">downloader</span><span class="o">.</span><span class="n">download_date_range_stock</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">stock</span> <span class="o">=</span> <span class="n">stock</span><span class="p">)</span>
 </pre></div>
-<div id="cell-4" class="clipboard-copy-txt">downloader = SEC_Annoumcement(config)
+<div id="cell-4" class="clipboard-copy-txt">downloader = SEC_Announcement(config)
 downloader.download_date_range_stock(start_date, end_date, stock = stock)</div>
         
         </div>
@@ -1938,9 +1938,9 @@ df[selected_columns].head(10)</div>
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="kn">from</span> <span class="nn">finnlp.data_sources.company_announcement.juchao</span> <span class="kn">import</span> <span class="n">Juchao_Annoumcement</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="kn">from</span> <span class="nn">finnlp.data_sources.company_announcement.juchao</span> <span class="kn">import</span> <span class="n">Juchao_Announcement</span>
 </pre></div>
-<div id="cell-8" class="clipboard-copy-txt">from finnlp.data_sources.company_announcement.juchao import Juchao_Annoumcement</div>
+<div id="cell-8" class="clipboard-copy-txt">from finnlp.data_sources.company_announcement.juchao import Juchao_Announcement</div>
         
         </div>
     </div>
@@ -2017,10 +2017,10 @@ config = {
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">downloader</span> <span class="o">=</span> <span class="n">Juchao_Annoumcement</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">downloader</span> <span class="o">=</span> <span class="n">Juchao_Announcement</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 <span class="n">downloader</span><span class="o">.</span><span class="n">download_date_range_stock</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">stock</span> <span class="o">=</span> <span class="n">stock</span><span class="p">,</span> <span class="n">get_content</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">delate_pdf</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">downloader = Juchao_Annoumcement(config)
+<div id="cell-10" class="clipboard-copy-txt">downloader = Juchao_Announcement(config)
 downloader.download_date_range_stock(start_date, end_date, stock = stock, get_content = True, delate_pdf = True)</div>
         
         </div>
