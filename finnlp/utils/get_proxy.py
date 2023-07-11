@@ -47,7 +47,7 @@ def get_china_free_proxy(pages = 10):
                 response = requests.get(base_url, headers=headers)
                 data = response.text
                 res = etree.HTML(data)
-                trs = res.xpath("/html/body/div[1]/div[4]/div[2]/div[2]/div[2]/table/tbody/tr")
+                trs = res.xpath('//table/tbody/tr')
                 if len(trs)!=0:
                     success = True
                     for tr in trs:
