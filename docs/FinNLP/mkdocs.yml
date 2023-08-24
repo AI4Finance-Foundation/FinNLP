@@ -1,11 +1,31 @@
-site_name: FinNLP
+site_name: FinGPT & FinNLP
 site_author: Oliver Wang, Xiao-yang Liu
 
 nav:
-  - Home: index.md
-  - News: jupyter/Data_Sources_News.ipynb
-  - Social Media: jupyter/Data_Sources_Social_Media.ipynb
-  - Company Announcement: jupyter/Data_Sources_Company_Announcement.ipynb
+  - Hello World: 
+    - About the project: 'index.md'
+
+  - FinGPT Models:
+    - FinGPT-v1: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/FinGPT-v1'
+    - FinGPT-v2: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/FinGPT-v2'
+    - FinGPT-v3: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/FinGPT-v3'
+
+  - Robo Advisor:
+    - chatgpt-robo-advisor-v1: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/chatgpt-robo-advisor-v1'
+    - chatgpt-robo-advisor-v2: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/chatgpt-robo-advisor-v2'
+
+  - Quantitative Trading:
+    - chatgpt-trading-v1: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/chatgpt-trading-v1'
+    - chatgpt-trading-v2: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/chatgpt-trading-v2'
+
+  - Low code development:
+    - chatgpt-low-code-development-v1: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/chatgpt-low-code-development-v1'
+    - chatgpt-low-code-development-v2: 'https://github.com/AI4Finance-Foundation/FinGPT/tree/master/fingpt/chatgpt-low-code-development-v2'
+
+  - Data Sources:  
+    - News: jupyter/Data_Sources_News.ipynb
+    - Social Media: jupyter/Data_Sources_Social_Media.ipynb
+    - Company Announcement: jupyter/Data_Sources_Company_Announcement.ipynb
 
 theme: 
   name: material

@@ -1,8 +1,8 @@
-# Internet-scale Financial Data
+# LLMs in financial world and Internet-scale Financial Data
 
-The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
+The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) and the data sources and supporting codes are in [FinNLP](https://github.com/AI4Finance-Foundation/FinNLP)
 
-中文版请点击[这里](./zh/index_zh.md)
+中文版请点击[这里](./zh/index.md)
 
 **Disclaimer: We are sharing codes for academic purpose under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money. Please use common sense and always first consult a professional before trading or investing.**
 
