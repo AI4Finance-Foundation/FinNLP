@@ -55,3 +55,37 @@ class SeekingAlpha_Date_Range(News_Downloader):
             return data, totalpages
 
 
+    def obtain_content(self, parallel = False, proxies = None):
+        if parallel:
+            import os
+            from pandarallel import pandarallel
+            pandarallel.initialize(nb_workers=os.cpu_count())
+            self.dataframe['content'] = self.dataframe.parallel_apply(lambda x: self._obtain_content(x, proxies = proxies), axis = 1)
+        else:
+            self.dataframe['content'] = self.dataframe.apply(lambda x: self._obtain_content(x, proxies = proxies), axis = 1)
+
+
+    def _obtain_content(self, x, proxies = None):
+        url = x['links']['self']
+        url = f"https://seekingalpha.com{url}"
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0'
+        }
+        res = requests.get(url, headers=headers, proxies=proxies)
+        if res.status_code != 200:
+            return ''
+        else:
+            resp = etree.HTML(res.text)
+            resp = resp.xpath('//script[5]//text()')
+            resp = resp[0].split('window.SSR_DATA = ')[1]
+            resp = resp[:-1]
+            resp = json.loads(resp)
+            content = resp['article']['response']['data']['attributes']['content']
+            content = etree.HTML(content)
+            content = content.xpath('//text()')
+            content = [c if c!= ' ' else '\n' for c in content]
+            content = ''.join(content)
+            content = content.strip()
+            return content
+
+        
