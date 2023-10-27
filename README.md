@@ -122,7 +122,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
   # Stocktwits
   from finnlp.data_sources.social_media.stocktwits_streaming import Stocktwits_Streaming
   
-  pages = 3
+  rounds = 3
   stock = "AAPL"
   config = {
       "use_proxy": "us_free",
@@ -131,7 +131,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
   }
   
   downloader = Stocktwits_Streaming(config)
-  downloader.download_date_range_stock(stock, pages)
+  downloader.download_streaming_stock(stock, rounds)
   selected_columns = ["created_at", "body"]
   downloader.dataframe[selected_columns].head(10)
   
