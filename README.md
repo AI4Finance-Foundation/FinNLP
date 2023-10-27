@@ -6,6 +6,27 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
 
 ## Ⅰ. How to Use
 
+### Installation
+
+Clone the FinNLP Repository:
+
+```
+git clone https://github.com/AI4Finance-Foundation/FinNLP
+```
+
+Change the Dir
+
+```
+cd FinNLP
+```
+
+Add Repository to Path
+
+``` python
+import sys
+sys.path.append('/content/FinNLP')
+```
+
 ### 1. News
 
 * US
