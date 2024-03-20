@@ -1,5 +1,11 @@
 # Internet-scale Financial Data
 
+[![Downloads](https://static.pepy.tech/badge/finnlp)]([https://pepy.tech/project/finnlp](https://pepy.tech/project/finnlp))
+[![Downloads](https://static.pepy.tech/badge/finnlp/week)](https://pepy.tech/project/finnlp)
+[![Python 3.8](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![PyPI](https://img.shields.io/pypi/v/finnlp.svg)](https://pypi.org/project/finnlp/)
+![License](https://img.shields.io/github/license/AI4Finance-Foundation/finnlp.svg?color=brightgreen)
+
 The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
 
 [FinNLP Website](https://ai4finance-foundation.github.io/FinNLP/) 
