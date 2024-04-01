@@ -88,7 +88,7 @@ The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT
     # 8	经济学人：巴西病根到底在哪里	              新浪美股北京时间1日讯 原本，巴西人是该高高兴兴迎接2016年的。8月间，里约热内卢将举办南...
     # 9	中国首家国有船厂破产倒闭:五洲船舶目前已停工	 低迷的中国造船市场，多年来首次出现国有船厂破产清算的一幕。浙江海运集团旗下的五洲船舶修造公司...
     
-    # Easymoney
+    # Eastmoney 东方财富
     from finnlp.data_sources.news.eastmoney_streaming import Eastmoney_Streaming
     
     pages = 3
