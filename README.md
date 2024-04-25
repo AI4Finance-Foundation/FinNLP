@@ -6,9 +6,7 @@
 [![PyPI](https://img.shields.io/pypi/v/finnlp.svg)](https://pypi.org/project/finnlp/)
 ![License](https://img.shields.io/github/license/AI4Finance-Foundation/finnlp.svg?color=brightgreen)
 
-The demos are shown in [FinGPT](https://github.com/AI4Finance-Foundation/ChatGPT-for-FinTech)
-
-[FinNLP Website](https://ai4finance-foundation.github.io/FinNLP/) 
+FinNLP provides a playground for all people interested in LLMs and NLP in Finance. Here we provide full pipelines for LLM training and finetuning in the field of finance. 
 
 ## Ⅰ. How to Use
 
