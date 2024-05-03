@@ -1,4 +1,8 @@
-# Internet-scale Financial Data
+<div align="center">
+<img align="center" width="30%" alt="image" src="https://github.com/AI4Finance-Foundation/FinGPT/assets/31713746/e0371951-1ce1-488e-aa25-0992dafcc139">
+</div>
+
+# FinNLP: Internet-scale Financial Data
 
 [![Downloads](https://static.pepy.tech/badge/finnlp)]([https://pepy.tech/project/finnlp](https://pepy.tech/project/finnlp))
 [![Downloads](https://static.pepy.tech/badge/finnlp/week)](https://pepy.tech/project/finnlp)
