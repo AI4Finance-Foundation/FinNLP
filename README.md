@@ -14,6 +14,27 @@ FinNLP provides a playground for all people interested in LLMs and NLP in Financ
 
 ## Ⅰ. How to Use
 
+### Installation
+
+Clone the FinNLP Repository:
+
+```
+git clone https://github.com/AI4Finance-Foundation/FinNLP
+```
+
+Change the Dir
+
+```
+cd FinNLP
+```
+
+Add Repository to Path
+
+``` python
+import sys
+sys.path.append('/content/FinNLP')
+```
+
 ### 1. News
 
 * US
