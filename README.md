@@ -12,6 +12,9 @@
 
 FinNLP provides a playground for all people interested in LLMs and NLP in Finance. Here we provide full pipelines for LLM training and finetuning in the field of finance. 
 
+![Visitors](https://api.visitorbadge.io/api/VisitorHit?user=AI4Finance-Foundation&repo=FinNLP&countColor=%23B17A)
+
+
 ## Ⅰ. How to Use
 
 ### 1. News
