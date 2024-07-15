@@ -133,7 +133,7 @@ FinNLP provides a playground for all people interested in LLMs and NLP in Financ
   # Stocktwits
   from finnlp.data_sources.social_media.stocktwits_streaming import Stocktwits_Streaming
   
-  pages = 3
+  rounds = 3
   stock = "AAPL"
   config = {
       "use_proxy": "us_free",
@@ -142,7 +142,7 @@ FinNLP provides a playground for all people interested in LLMs and NLP in Financ
   }
   
   downloader = Stocktwits_Streaming(config)
-  downloader.download_date_range_stock(stock, pages)
+  downloader.download_streaming_stock(stock, rounds)
   selected_columns = ["created_at", "body"]
   downloader.dataframe[selected_columns].head(10)
   
