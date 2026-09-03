@@ -13,7 +13,7 @@ def load_dataset(dataset_name, **kwargs):
             stock_path = os.path.join(root_path, stock)
             date_files = os.listdir(stock_path)
             for date in date_files:
-                with open(os.path.join(stock_path, date_files[0])) as f:
+                with open(os.path.join(stock_path, date)) as f:
                     json_list = f.readlines()
                 tmp_json = []
                 for json_str in json_list:
@@ -26,4 +26,3 @@ def load_dataset(dataset_name, **kwargs):
 
     else:
         raise NotImplementedError("Only support Stocknet dataset for now")
-
